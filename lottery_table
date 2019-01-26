@@ -1,0 +1,75 @@
+// prize
+CREATE TABLE prize(
+    id INT PRIMARY KEY NOT NULL COMMENT '奖品id' AUTO_INCREMENT,
+    name VARCHAR(255) DEFAULT "" NOT NULL COMMENT '奖品名称',
+    feature VARCHAR(255) DEFAULT "" NOT NULL COMMENT '奖品特征',
+    type TINYINT DEFAULT 0 NOT NULL COMMENT '奖品类型',
+    create_time DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL COMMENT '创建时间',
+    update_time DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP NOT NULL COMMENT '更新时间'
+);
+
+// prize_pool
+CREATE TABLE `prize_pool` (
+`id`  int NOT NULL AUTO_INCREMENT COMMENT '奖品池id' ,
+`activity_id`  int NOT NULL DEFAULT 0 COMMENT '对应活动id' ,
+`segment_id`  int NOT NULL AUTO_INCREMENT COMMENT '对应批次id' ,
+`prize_list`  varchar(255) NOT NULL DEFAULT '' COMMENT '奖品信息列表，包括奖品id，总数量，剩余数量，对应人群' ,
+`create_time`  datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间' ,
+`update_time`  datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP  COMMENT '更新时间' ,
+PRIMARY KEY (`id`)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+//activity
+CREATE TABLE `activity` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '活动id',
+  `name` varchar(255) NOT NULL DEFAULT '' COMMENT '活动名称',
+  `description` varchar(255) NOT NULL DEFAULT '' COMMENT '奖品描述',
+  `start_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '活动开始时间',
+  `end_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '活动结束时间',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '活动状态',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+//segment
+CREATE TABLE `segment` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '批次id',
+  `name` varchar(255) NOT NULL DEFAULT '' COMMENT '批次名称',
+  `description` varchar(255) NOT NULL DEFAULT '' COMMENT '批次描述',
+  `activity_id` int(11) NOT NULL DEFAULT '0' COMMENT '对应活动id',
+  `start_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '批次开始时间',
+  `end_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '批次结束时间',
+  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '批次状态',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+//prize_record
+CREATE TABLE `prize_record` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `activity_id` int(11) NOT NULL DEFAULT '0' COMMENT '对应活动id',
+  `segment_id` int(11) NOT NULL DEFAULT '0' COMMENT '对应批次id',
+  `user_id` int(11) NOT NULL DEFAULT '0' COMMENT '用户id',
+  `phone` varchar(255) NOT NULL DEFAULT '0' COMMENT '用户手机',
+  `win_schedule` tinyint(2) NOT NULL DEFAULT '0' COMMENT '发奖进度',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+//constraint
+CREATE TABLE `constraint` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '约束id',
+  `name` varchar(255) NOT NULL DEFAULT '' COMMENT '约束名称',
+  `activity_id` int(11) NOT NULL DEFAULT '0' COMMENT '对应活动id',
+  `segment_id` int(11) NOT NULL DEFAULT '0' COMMENT '对应批次id',
+  `type` tinyint(4) NOT NULL DEFAULT '0' COMMENT '约束类型',
+  `constraint_key` varchar(255) NOT NULL DEFAULT '' COMMENT '约束键',
+  `constraint_value` varchar(255) NOT NULL DEFAULT '' COMMENT '约束值',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+

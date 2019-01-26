@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+<!--使用<springProperty>,才可使用application.properties中的设置值-->
+    <springProperty scope="context" name="root.log.level" source="root.log.level"/>
+    <springProperty scope="context" name="root.log.path" source="root.log.path"/>
+    <!--控制台输出-->
+    <!--<appender>是<configuration>的子节点，是负责写日志的组件。有两个必要属性name和class,name指定appender名称，class指定appender的全限定名。
+    ConsoleAppender表示将日志输出到console-->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoder 对日志进行格式化。默认配置为PatternLayoutEncoder -->
+        <encoder>
+            <!--%d显示日志记录时间，后带格式  %-5p 显示该条日志的优先级  %c{0}.%M类名层级与方法名  %X{traceId} 记录那个客户端访问留下的
+            %m显示输出消息 %n换行符-->
+            <pattern>[%d{yyyy-MM-dd HH:mm:ss}] %-5p %c{0}.%M # %X{traceId} - %m%n</pattern>
+        </encoder>
+    </appender>
+    <!--RollingFileAppender继承自FileAppender，提供日志目标文件自动切换的功能。例如可以用日期作为日志分割的条件。
+        RollingFileAppender有两个重要属性，RollingPolicy负责怎么切换日志，TriggeringPolicy负责何时切换。-->
+    <appender name="APP_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!--指定输出文件名。-->
+        <file>${root.log.path}/app.log</file>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>${root.log.level}</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <encoder>
+            <pattern>[%d{yyyy-MM-dd HH:mm:ss}] %-5p %c{0}.%M # %X{traceId} - %m%n</pattern>
+        </encoder>
+        <!--TimeBasedRollingPolicy日志滚动策略,是基于时间的.包含一个必需属性fileNamePattern-->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!--决定了日志滚动时，归档日志的命名策略. 由文件名，以及一个%d转移符组成。-->
+            <fileNamePattern>${root.log.path}/app.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!-- 归档日志最大保留时间 -->
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+    </appender>
+
+    <appender name="SPRING_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${root.log.path}/spring.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${root.log.path}/spring.log.%d{yyyy-MM-dd}</fileNamePattern>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>[%d{yyyy-MM-dd HH:mm:ss}] %-5p %c{0}.%M # %X{traceId} - %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="ERROR_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+        <file>${root.log.path}/error.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${root.log.path}/error.log.%d{yyyy-MM-dd}</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>[%d{yyyy-MM-dd HH:mm:ss}] %-5p %c{0}.%M # %X{traceId} - %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="TRACE_LOG" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${root.log.path}/trace.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${root.log.path}/trace.log.%d{yyyyMMdd}</fileNamePattern>
+            <maxHistory>7</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <!--%msg：日志消息，%n是换行符 %c 调用logger的空间全称 %L显示调用logger的代码行-->
+            <pattern>[%p][%d{yyyy-MM-dd'T'HH:mm:ss.SSSZ}][%c:%L] %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <root level="${root.log.level}">
+        <appender-ref ref="APP_FILE"/>
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+    <logger name="org.springframework" level="${root.log.level}" additivity="false">
+        <appender-ref ref="SPRING_FILE"/>
+        <appender-ref ref="ERROR_FILE" />
+    </logger>
+    <logger name="trace_log" additivity="false" level="${root.log.level}">
+        <appender-ref ref="TRACE_LOG" />
+    </logger>
+
+    <logger name="error" level="ERROR" additivity="false">
+        <appender-ref ref="ERROR_FILE"/>
+    </logger>
+
+</configuration>

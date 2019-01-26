@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+    <!--<classPathEntry
+            location="C:\Users\admin\.m2\repository\mysql\mysql-connector-java\8.0.13\mysql-connector-java-8.0.13.jar"/>-->
+    <context id="lottery" targetRuntime="Mybatis3">
+
+        <!-- defaultModelType="hierarchical" -->
+        <property name="javaFileEncoding" value="UTF-8"/>
+        <property name="suppressTypeWarnings" value="true"/>
+
+        <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin"/>
+
+
+        <plugin type="org.mybatis.generator.plugins.MapperConfigPlugin">
+            <property name="fileName" value="mapper-config.xml"/>
+            <property name="targetPackage" value="com.dingpeng.java.exercise.lottery.base.mapper"/>
+            <property name="targetProject"
+                      value="MAVEN"/>
+        </plugin>
+        <plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin">
+            <property name="searchString" value="Example$"/>
+            <property name="replaceString" value="Criteria"/>
+        </plugin>
+
+        <!-- 注释 -->
+        <commentGenerator>
+            <property name="suppressAllComments" value="true"/><!-- 是否取消注释 -->
+            <property name="suppressDate" value="true"/> <!-- 是否生成注释代时间戳 -->
+        </commentGenerator>
+
+        <!-- jdbc连接 -->
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/dingpeng?nullCatalogMeansCurrent=true" userId="root" password="123456"/>
+        <!-- 类型转换 -->
+        <javaTypeResolver>
+            <!-- 是否使用bigDecimal， false可自动转化以下类型（Long, Integer, Short, etc.） -->
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+        <!-- 生成实体类地址 -->
+        <javaModelGenerator targetPackage="com.dingpeng.java.exercise.lottery.base.entity"
+                            targetProject="MAVEN">
+            <!-- 是否在当前路径下新加一层schema,eg：false路径com.oop.eksp.user.model， true:com.oop.eksp.user.model.[schemaName] -->
+            <property name="enableSubPackages" value="true"/>
+            <!-- 是否针对string类型的字段在set的时候进行trim调用 -->
+            <property name="trimStrings" value="false"/>
+        </javaModelGenerator>
+
+        <!-- 生成mapxml文件 -->
+        <sqlMapGenerator targetPackage="com.dingpeng.java.exercise.lottery.base.mapper.xml"
+                         targetProject="MAVEN">
+            <!-- 是否在当前路径下新加一层schema,eg：fase路径com.oop.eksp.user.model， true:com.oop.eksp.user.model.[schemaName] -->
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <!-- 生成mapxml对应client，也就是接口dao -->
+        <javaClientGenerator targetPackage="com.dingpeng.java.exercise.lottery.base.mapper"
+                             targetProject="MAVEN" type="XMLMAPPER">
+            <!-- 是否在当前路径下新加一层schema,eg：fase路径com.oop.eksp.user.model， true:com.oop.eksp.user.model.[schemaName] -->
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+        <!-- 表名与对应创建的实体对象-->
+        <table tableName="prize" domainObjectName="PrizeEntity"></table>
+        <table tableName="prize_pool" domainObjectName="PrizePoolEntity"></table>
+        <table tableName="activity" domainObjectName="ActivityEntity"></table>
+        <table tableName="segment" domainObjectName="SegmentEntity"></table>
+        <table tableName="prize_record" domainObjectName="PrizeRecordEntity"></table>
+        <table tableName="constraint" domainObjectName="ConstraintEntity"></table>
+    </context>
+</generatorConfiguration>

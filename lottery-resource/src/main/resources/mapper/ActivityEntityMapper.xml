@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!--<mapper>是配置文件的核心元素 namespace指定唯一的命名空间，直接绑定Dao接口，面向接口编程，接口中的方法不用实现，方法名即为sql语句的Id-->
+<mapper namespace="com.dingpeng.java.exercise.lottery.resource.mapper.ActivityEntityDao" >
+    <!--结果映射集，定义表到实体类的映射规则-->
+    <resultMap id="ActivityResultMap" type="com.dingpeng.java.exercise.lottery.resource.entity.ActivityEntity" >
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="name" property="name" jdbcType="VARCHAR" />
+        <result column="description" property="description" jdbcType="VARCHAR" />
+        <result column="start_time" property="startTime" jdbcType="TIMESTAMP" />
+        <result column="end_time" property="endTime" jdbcType="TIMESTAMP" />
+        <result column="status" property="status" jdbcType="TINYINT" />
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    </resultMap>
+
+    <sql id="Table_Name">activity</sql>
+    <sql id="Concise_Column_List" >name, description, start_time, end_time, status</sql>
+    <sql id="Total_Column_List">id, name, deacription, start_time, end_time, status, create_time,update_time</sql>
+
+    <!--当主键是自增的情况下 useGeneratedKeys="true" keyProperty="id"添加成功后可以获得对象属性id的值-->
+    <insert id="insertOne" parameterType="com.dingpeng.java.exercise.lottery.base.entity.ActivityEntity" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO
+        <include refid="Table_Name"/>
+        (name, description, start_time, end_time, status)
+        VALUES
+        (#{name}, #{description}, #{startTime}, #{endTime},#{status})
+    </insert>
+
+    <insert id="insertList" parameterType="List" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO
+        <include refid="Table_Name"/>
+        (name, description, start_time, end_time, status)
+        VALUES
+        <foreach collection="list" item="item" separator=",">
+            (#{item.name}, #{item.description}, #{item.startTime}, #{item.endTime},#{item.status})
+        </foreach>
+    </insert>
+
+    <update id="updateByPrimaryKey" parameterType="com.dingpeng.java.exercise.lottery.base.entity.ActivityEntity">
+        UPDATE
+        <include refid="Table_Name"/>
+        <set>
+            <if test="name != null" >
+                name = #{name},
+            </if>
+            <if test="description != null" >
+                description = #{description},
+            </if>
+            <if test="startTime != null" >
+                start_time = #{startTime},
+            </if>
+            <if test="endTime != null" >
+                end_time = #{endTime},
+            </if>
+            <if test="status != null" >
+                status = #{status},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+        delete from
+        <include refid="Table_Name"/>
+        where id = #{id}
+    </delete>
+
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="ActivityResultMap">
+        SELECT
+        <include refid="Total_Column_List"/>
+        FROM
+        <include refid="Table_Name"/>
+        WHERE id = #{id}
+    </select>
+
+    <!--传进map，用@param注解会自动将多个参数组合为map-->
+    <select id="selectEffectiveActivity" parameterType="map" resultMap="ActivityResultMap">
+        SELECT
+        <include refid="Total_Column_List"/>
+        FROM
+        <include refid="Table_Name"/>
+        WHERE  status = 1
+        <!-- <等特殊字符要放在<![CDATA[ ]]>-->
+        <![CDATA[AND start_time <= #{currentTime}]]>
+        AND end_time >= #{currentTime}
+        ORDER BY CREATE ASC
+    </select>
+
+    <select id="selectUnEffectiveActivity" parameterType="map" resultMap="ActivityResultMap">
+        SELECT
+        <include refid="Total_Column_List"/>
+        FROM
+        <include refid="Table_Name"/>
+        WHERE  status = 0
+        <!-- <等特殊字符要放在<![CDATA[ ]]> 未开始 或者 已结束-->
+        OR start_time >= #{currentTime}
+        <![CDATA[OR end_time <= #{currentTime}]]>
+        ORDER BY CREATE ASC
+    </select>
+</mapper>

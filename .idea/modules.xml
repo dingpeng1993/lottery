@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/lottery.iml" filepath="$PROJECT_DIR$/lottery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lottery-api/lottery-api.iml" filepath="$PROJECT_DIR$/lottery-api/lottery-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lottery-biz/lottery-biz.iml" filepath="$PROJECT_DIR$/lottery-biz/lottery-biz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lottery-common/lottery-common.iml" filepath="$PROJECT_DIR$/lottery-common/lottery-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lottery-domain/lottery-domain.iml" filepath="$PROJECT_DIR$/lottery-domain/lottery-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lottery-resource/lottery-resource.iml" filepath="$PROJECT_DIR$/lottery-resource/lottery-resource.iml" />
+    </modules>
+  </component>
+</project>

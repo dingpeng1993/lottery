@@ -1,0 +1,193 @@
+[2019-01-21 13:57:55] INFO  TomcatWebServer.initialize #  - Tomcat initialized with port(s): 8082 (http)
+[2019-01-21 13:57:57] INFO  ContextLoader.prepareWebApplicationContext #  - Root WebApplicationContext: initialization completed in 5222 ms
+[2019-01-21 13:57:58] INFO  EndpointLinksResolver.<init> #  - Exposing 2 endpoint(s) beneath base path '/actuator'
+[2019-01-21 13:57:58] INFO  ThreadPoolTaskExecutor.initialize #  - Initializing ExecutorService 'applicationTaskExecutor'
+[2019-01-21 13:57:59] INFO  TomcatWebServer.start #  - Tomcat started on port(s): 8082 (http) with context path ''
+[2019-01-21 13:58:22] INFO  TomcatWebServer.initialize #  - Tomcat initialized with port(s): 8082 (http)
+[2019-01-21 13:58:24] INFO  ContextLoader.prepareWebApplicationContext #  - Root WebApplicationContext: initialization completed in 5516 ms
+[2019-01-21 13:58:25] INFO  EndpointLinksResolver.<init> #  - Exposing 2 endpoint(s) beneath base path '/actuator'
+[2019-01-21 13:58:25] INFO  ThreadPoolTaskExecutor.initialize #  - Initializing ExecutorService 'applicationTaskExecutor'
+[2019-01-21 13:58:26] INFO  TomcatWebServer.start #  - Tomcat started on port(s): 8082 (http) with context path ''
+[2019-01-21 14:01:14] INFO  TomcatWebServer.initialize #  - Tomcat initialized with port(s): 8082 (http)
+[2019-01-21 14:01:16] INFO  ContextLoader.prepareWebApplicationContext #  - Root WebApplicationContext: initialization completed in 4955 ms
+[2019-01-21 14:01:17] INFO  EndpointLinksResolver.<init> #  - Exposing 2 endpoint(s) beneath base path '/actuator'
+[2019-01-21 14:01:17] INFO  ThreadPoolTaskExecutor.initialize #  - Initializing ExecutorService 'applicationTaskExecutor'
+[2019-01-21 14:01:18] INFO  TomcatWebServer.start #  - Tomcat started on port(s): 8082 (http) with context path ''
+[2019-01-21 14:01:33] INFO  TomcatWebServer.initialize #  - Tomcat initialized with port(s): 8082 (http)
+[2019-01-21 14:01:34] INFO  ContextLoader.prepareWebApplicationContext #  - Root WebApplicationContext: initialization completed in 4627 ms
+[2019-01-21 14:01:35] INFO  EndpointLinksResolver.<init> #  - Exposing 2 endpoint(s) beneath base path '/actuator'
+[2019-01-21 14:01:35] INFO  ThreadPoolTaskExecutor.initialize #  - Initializing ExecutorService 'applicationTaskExecutor'
+[2019-01-21 14:01:36] INFO  TomcatWebServer.start #  - Tomcat started on port(s): 8082 (http) with context path ''
+[2019-01-21 16:34:19] INFO  TomcatWebServer.initialize #  - Tomcat initialized with port(s): 8082 (http)
+[2019-01-21 16:34:21] INFO  ContextLoader.prepareWebApplicationContext #  - Root WebApplicationContext: initialization completed in 4771 ms
+[2019-01-21 16:34:22] INFO  ThreadPoolTaskExecutor.initialize #  - Initializing ExecutorService 'applicationTaskExecutor'
+[2019-01-21 16:34:22] INFO  TomcatWebServer.initialize #  - Tomcat initialized with port(s): 9522 (http)
+[2019-01-21 16:34:22] INFO  ContextLoader.prepareWebApplicationContext #  - Root WebApplicationContext: initialization completed in 270 ms
+[2019-01-21 16:34:23] INFO  EndpointLinksResolver.<init> #  - Exposing 2 endpoint(s) beneath base path '/actuator'
+[2019-01-21 16:34:23] INFO  TomcatWebServer.start #  - Tomcat started on port(s): 9522 (http) with context path ''
+[2019-01-21 16:34:23] INFO  TomcatWebServer.start #  - Tomcat started on port(s): 8082 (http) with context path ''
+[2019-01-21 17:13:34] INFO  TomcatWebServer.initialize #  - Tomcat initialized with port(s): 8082 (http)
+[2019-01-21 17:13:36] INFO  ContextLoader.prepareWebApplicationContext #  - Root WebApplicationContext: initialization completed in 5040 ms
+[2019-01-21 17:13:37] INFO  ThreadPoolTaskExecutor.initialize #  - Initializing ExecutorService 'applicationTaskExecutor'
+[2019-01-21 17:13:37] INFO  TomcatWebServer.initialize #  - Tomcat initialized with port(s): 9522 (http)
+[2019-01-21 17:13:38] INFO  ContextLoader.prepareWebApplicationContext #  - Root WebApplicationContext: initialization completed in 244 ms
+[2019-01-21 17:13:38] INFO  EndpointLinksResolver.<init> #  - Exposing 2 endpoint(s) beneath base path '/actuator'
+[2019-01-21 17:13:38] INFO  TomcatWebServer.start #  - Tomcat started on port(s): 9522 (http) with context path ''
+[2019-01-21 17:13:38] INFO  TomcatWebServer.start #  - Tomcat started on port(s): 8082 (http) with context path ''
+[2019-01-21 17:14:49] INFO  TomcatWebServer.initialize #  - Tomcat initialized with port(s): 8082 (http)
+[2019-01-21 17:14:50] INFO  ContextLoader.prepareWebApplicationContext #  - Root WebApplicationContext: initialization completed in 4939 ms
+[2019-01-21 17:14:51] INFO  ThreadPoolTaskExecutor.initialize #  - Initializing ExecutorService 'applicationTaskExecutor'
+[2019-01-21 17:14:53] INFO  TomcatWebServer.initialize #  - Tomcat initialized with port(s): 9522 (http)
+[2019-01-21 17:14:53] INFO  ContextLoader.prepareWebApplicationContext #  - Root WebApplicationContext: initialization completed in 215 ms
+[2019-01-21 17:14:53] INFO  EndpointLinksResolver.<init> #  - Exposing 2 endpoint(s) beneath base path '/actuator'
+[2019-01-21 17:14:53] INFO  TomcatWebServer.start #  - Tomcat started on port(s): 9522 (http) with context path ''
+[2019-01-21 17:14:53] INFO  TomcatWebServer.start #  - Tomcat started on port(s): 8082 (http) with context path ''
+[2019-01-21 17:43:48] INFO  TomcatWebServer.initialize #  - Tomcat initialized with port(s): 8082 (http)
+[2019-01-21 17:43:49] INFO  ContextLoader.prepareWebApplicationContext #  - Root WebApplicationContext: initialization completed in 5710 ms
+[2019-01-21 17:43:50] INFO  ThreadPoolTaskExecutor.initialize #  - Initializing ExecutorService 'applicationTaskExecutor'
+[2019-01-21 17:43:51] INFO  TomcatWebServer.initialize #  - Tomcat initialized with port(s): 9522 (http)
+[2019-01-21 17:43:51] INFO  ContextLoader.prepareWebApplicationContext #  - Root WebApplicationContext: initialization completed in 253 ms
+[2019-01-21 17:43:51] INFO  EndpointLinksResolver.<init> #  - Exposing 2 endpoint(s) beneath base path '/actuator'
+[2019-01-21 17:43:51] INFO  TomcatWebServer.start #  - Tomcat started on port(s): 9522 (http) with context path ''
+[2019-01-21 17:43:51] INFO  TomcatWebServer.start #  - Tomcat started on port(s): 8082 (http) with context path ''
+[2019-01-21 17:51:24] INFO  TomcatWebServer.initialize #  - Tomcat initialized with port(s): 8082 (http)
+[2019-01-21 17:51:25] INFO  ContextLoader.prepareWebApplicationContext #  - Root WebApplicationContext: initialization completed in 4872 ms
+[2019-01-21 17:51:26] INFO  ThreadPoolTaskExecutor.initialize #  - Initializing ExecutorService 'applicationTaskExecutor'
+[2019-01-21 17:51:27] INFO  TomcatWebServer.initialize #  - Tomcat initialized with port(s): 9522 (http)
+[2019-01-21 17:51:27] INFO  ContextLoader.prepareWebApplicationContext #  - Root WebApplicationContext: initialization completed in 170 ms
+[2019-01-21 17:51:27] INFO  EndpointLinksResolver.<init> #  - Exposing 2 endpoint(s) beneath base path '/actuator'
+[2019-01-21 17:51:27] INFO  TomcatWebServer.start #  - Tomcat started on port(s): 9522 (http) with context path ''
+[2019-01-21 17:51:27] INFO  TomcatWebServer.start #  - Tomcat started on port(s): 8082 (http) with context path ''
+[2019-01-21 17:55:22] INFO  TomcatWebServer.initialize #  - Tomcat initialized with port(s): 8082 (http)
+[2019-01-21 17:55:23] INFO  ContextLoader.prepareWebApplicationContext #  - Root WebApplicationContext: initialization completed in 3819 ms
+[2019-01-21 17:55:24] INFO  ThreadPoolTaskExecutor.initialize #  - Initializing ExecutorService 'applicationTaskExecutor'
+[2019-01-21 17:55:25] INFO  TomcatWebServer.initialize #  - Tomcat initialized with port(s): 9522 (http)
+[2019-01-21 17:55:25] INFO  ContextLoader.prepareWebApplicationContext #  - Root WebApplicationContext: initialization completed in 161 ms
+[2019-01-21 17:55:25] INFO  EndpointLinksResolver.<init> #  - Exposing 2 endpoint(s) beneath base path '/actuator'
+[2019-01-21 17:55:25] INFO  TomcatWebServer.start #  - Tomcat started on port(s): 9522 (http) with context path ''
+[2019-01-21 17:55:25] INFO  TomcatWebServer.start #  - Tomcat started on port(s): 8082 (http) with context path ''
+[2019-01-21 17:55:26] INFO  DispatcherServlet.initServletBean #  - Initializing Servlet 'dispatcherServlet'
+[2019-01-21 17:55:26] INFO  DispatcherServlet.initServletBean #  - Completed initialization in 40 ms
+[2019-01-21 17:57:20] INFO  TomcatWebServer.initialize #  - Tomcat initialized with port(s): 8082 (http)
+[2019-01-21 17:57:22] INFO  ContextLoader.prepareWebApplicationContext #  - Root WebApplicationContext: initialization completed in 2778 ms
+[2019-01-21 17:57:23] INFO  ThreadPoolTaskExecutor.initialize #  - Initializing ExecutorService 'applicationTaskExecutor'
+[2019-01-21 17:57:23] INFO  TomcatWebServer.initialize #  - Tomcat initialized with port(s): 9522 (http)
+[2019-01-21 17:57:23] INFO  ContextLoader.prepareWebApplicationContext #  - Root WebApplicationContext: initialization completed in 100 ms
+[2019-01-21 17:57:23] INFO  EndpointLinksResolver.<init> #  - Exposing 2 endpoint(s) beneath base path '/actuator'
+[2019-01-21 17:57:23] INFO  TomcatWebServer.start #  - Tomcat started on port(s): 9522 (http) with context path ''
+[2019-01-21 17:57:23] INFO  TomcatWebServer.start #  - Tomcat started on port(s): 8082 (http) with context path ''
+[2019-01-21 17:57:24] INFO  DispatcherServlet.initServletBean #  - Initializing Servlet 'dispatcherServlet'
+[2019-01-21 17:57:24] INFO  DispatcherServlet.initServletBean #  - Completed initialization in 10 ms
+[2019-01-21 17:59:07] INFO  TomcatWebServer.initialize #  - Tomcat initialized with port(s): 8082 (http)
+[2019-01-21 17:59:08] INFO  ContextLoader.prepareWebApplicationContext #  - Root WebApplicationContext: initialization completed in 2742 ms
+[2019-01-21 17:59:09] INFO  ThreadPoolTaskExecutor.initialize #  - Initializing ExecutorService 'applicationTaskExecutor'
+[2019-01-21 17:59:09] INFO  TomcatWebServer.initialize #  - Tomcat initialized with port(s): 9522 (http)
+[2019-01-21 17:59:09] INFO  ContextLoader.prepareWebApplicationContext #  - Root WebApplicationContext: initialization completed in 90 ms
+[2019-01-21 17:59:09] INFO  EndpointLinksResolver.<init> #  - Exposing 2 endpoint(s) beneath base path '/actuator'
+[2019-01-21 17:59:09] INFO  TomcatWebServer.start #  - Tomcat started on port(s): 9522 (http) with context path ''
+[2019-01-21 17:59:10] INFO  TomcatWebServer.start #  - Tomcat started on port(s): 8082 (http) with context path ''
+[2019-01-21 17:59:10] INFO  DispatcherServlet.initServletBean #  - Initializing Servlet 'dispatcherServlet'
+[2019-01-21 17:59:10] INFO  DispatcherServlet.initServletBean #  - Completed initialization in 0 ms
+[2019-01-21 17:59:34] INFO  TomcatWebServer.initialize #  - Tomcat initialized with port(s): 8082 (http)
+[2019-01-21 17:59:35] INFO  ContextLoader.prepareWebApplicationContext #  - Root WebApplicationContext: initialization completed in 2796 ms
+[2019-01-21 17:59:35] INFO  ThreadPoolTaskExecutor.initialize #  - Initializing ExecutorService 'applicationTaskExecutor'
+[2019-01-21 17:59:36] INFO  TomcatWebServer.initialize #  - Tomcat initialized with port(s): 9522 (http)
+[2019-01-21 17:59:36] INFO  ContextLoader.prepareWebApplicationContext #  - Root WebApplicationContext: initialization completed in 88 ms
+[2019-01-21 17:59:36] INFO  EndpointLinksResolver.<init> #  - Exposing 2 endpoint(s) beneath base path '/actuator'
+[2019-01-21 17:59:36] INFO  TomcatWebServer.start #  - Tomcat started on port(s): 9522 (http) with context path ''
+[2019-01-21 17:59:36] INFO  TomcatWebServer.start #  - Tomcat started on port(s): 8082 (http) with context path ''
+[2019-01-21 17:59:37] INFO  DispatcherServlet.initServletBean #  - Initializing Servlet 'dispatcherServlet'
+[2019-01-21 17:59:37] INFO  DispatcherServlet.initServletBean #  - Completed initialization in 10 ms
+[2019-01-21 18:06:27] INFO  TomcatWebServer.initialize #  - Tomcat initialized with port(s): 8082 (http)
+[2019-01-21 18:06:29] INFO  ContextLoader.prepareWebApplicationContext #  - Root WebApplicationContext: initialization completed in 2845 ms
+[2019-01-21 18:06:29] INFO  ThreadPoolTaskExecutor.initialize #  - Initializing ExecutorService 'applicationTaskExecutor'
+[2019-01-21 18:06:30] INFO  TomcatWebServer.initialize #  - Tomcat initialized with port(s): 9522 (http)
+[2019-01-21 18:06:30] INFO  ContextLoader.prepareWebApplicationContext #  - Root WebApplicationContext: initialization completed in 111 ms
+[2019-01-21 18:06:30] INFO  EndpointLinksResolver.<init> #  - Exposing 2 endpoint(s) beneath base path '/actuator'
+[2019-01-21 18:06:30] INFO  TomcatWebServer.start #  - Tomcat started on port(s): 9522 (http) with context path ''
+[2019-01-21 18:06:30] INFO  TomcatWebServer.start #  - Tomcat started on port(s): 8082 (http) with context path ''
+[2019-01-21 18:06:31] INFO  DispatcherServlet.initServletBean #  - Initializing Servlet 'dispatcherServlet'
+[2019-01-21 18:06:31] INFO  DispatcherServlet.initServletBean #  - Completed initialization in 7 ms
+[2019-01-21 18:08:20] INFO  TomcatWebServer.initialize #  - Tomcat initialized with port(s): 8082 (http)
+[2019-01-21 18:08:22] INFO  ContextLoader.prepareWebApplicationContext #  - Root WebApplicationContext: initialization completed in 2908 ms
+[2019-01-21 18:08:22] INFO  ThreadPoolTaskExecutor.initialize #  - Initializing ExecutorService 'applicationTaskExecutor'
+[2019-01-21 18:08:23] INFO  TomcatWebServer.initialize #  - Tomcat initialized with port(s): 9522 (http)
+[2019-01-21 18:08:23] INFO  ContextLoader.prepareWebApplicationContext #  - Root WebApplicationContext: initialization completed in 100 ms
+[2019-01-21 18:08:23] INFO  EndpointLinksResolver.<init> #  - Exposing 2 endpoint(s) beneath base path '/actuator'
+[2019-01-21 18:08:23] INFO  TomcatWebServer.start #  - Tomcat started on port(s): 9522 (http) with context path ''
+[2019-01-21 18:08:23] INFO  TomcatWebServer.start #  - Tomcat started on port(s): 8082 (http) with context path ''
+[2019-01-21 18:08:24] INFO  DispatcherServlet.initServletBean #  - Initializing Servlet 'dispatcherServlet'
+[2019-01-21 18:08:24] INFO  DispatcherServlet.initServletBean #  - Completed initialization in 0 ms
+[2019-01-21 18:17:20] INFO  RepositoryConfigurationDelegate.registerRepositoriesIn #  - Bootstrapping Spring Data repositories in DEFAULT mode.
+[2019-01-21 18:17:20] INFO  RepositoryConfigurationDelegate.registerRepositoriesIn #  - Finished Spring Data repository scanning in 11ms. Found 0 repository interfaces.
+[2019-01-21 18:17:20] ERROR SpringApplication.reportFailure #  - Application run failed
+java.lang.NoClassDefFoundError: javax/persistence/EntityManagerFactory
+	at org.springframework.data.jpa.util.BeanDefinitionUtils.<clinit>(BeanDefinitionUtils.java:54)
+	at org.springframework.data.jpa.repository.support.EntityManagerBeanDefinitionRegistrarPostProcessor.postProcessBeanFactory(EntityManagerBeanDefinitionRegistrarPostProcessor.java:71)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:286)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:174)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:691)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:528)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at com.dingpeng.java.exercise.lottery.ApplicationStarter.main(ApplicationStarter.java:20)
+Caused by: java.lang.ClassNotFoundException: javax.persistence.EntityManagerFactory
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 11 common frames omitted
+[2019-01-21 18:17:40] INFO  RepositoryConfigurationDelegate.registerRepositoriesIn #  - Bootstrapping Spring Data repositories in DEFAULT mode.
+[2019-01-21 18:17:40] INFO  RepositoryConfigurationDelegate.registerRepositoriesIn #  - Finished Spring Data repository scanning in 0ms. Found 0 repository interfaces.
+[2019-01-21 18:17:40] ERROR SpringApplication.reportFailure #  - Application run failed
+java.lang.NoClassDefFoundError: javax/persistence/EntityManagerFactory
+	at org.springframework.data.jpa.util.BeanDefinitionUtils.<clinit>(BeanDefinitionUtils.java:54)
+	at org.springframework.data.jpa.repository.support.EntityManagerBeanDefinitionRegistrarPostProcessor.postProcessBeanFactory(EntityManagerBeanDefinitionRegistrarPostProcessor.java:71)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:286)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:174)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:691)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:528)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at com.dingpeng.java.exercise.lottery.ApplicationStarter.main(ApplicationStarter.java:20)
+Caused by: java.lang.ClassNotFoundException: javax.persistence.EntityManagerFactory
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 11 common frames omitted
+[2019-01-21 18:18:33] INFO  RepositoryConfigurationDelegate.registerRepositoriesIn #  - Bootstrapping Spring Data repositories in DEFAULT mode.
+[2019-01-21 18:18:33] INFO  RepositoryConfigurationDelegate.registerRepositoriesIn #  - Finished Spring Data repository scanning in 10ms. Found 0 repository interfaces.
+[2019-01-21 18:18:33] ERROR SpringApplication.reportFailure #  - Application run failed
+java.lang.NoClassDefFoundError: javax/persistence/EntityManagerFactory
+	at org.springframework.data.jpa.util.BeanDefinitionUtils.<clinit>(BeanDefinitionUtils.java:54)
+	at org.springframework.data.jpa.repository.support.EntityManagerBeanDefinitionRegistrarPostProcessor.postProcessBeanFactory(EntityManagerBeanDefinitionRegistrarPostProcessor.java:71)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:286)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:174)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:691)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:528)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at com.dingpeng.java.exercise.lottery.ApplicationStarter.main(ApplicationStarter.java:20)
+Caused by: java.lang.ClassNotFoundException: javax.persistence.EntityManagerFactory
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 11 common frames omitted
+[2019-01-21 18:26:10] INFO  TomcatWebServer.initialize #  - Tomcat initialized with port(s): 8082 (http)
+[2019-01-21 18:26:12] INFO  ContextLoader.prepareWebApplicationContext #  - Root WebApplicationContext: initialization completed in 2795 ms
+[2019-01-21 18:26:12] INFO  ThreadPoolTaskExecutor.initialize #  - Initializing ExecutorService 'applicationTaskExecutor'
+[2019-01-21 18:26:13] INFO  TomcatWebServer.initialize #  - Tomcat initialized with port(s): 9522 (http)
+[2019-01-21 18:26:13] INFO  ContextLoader.prepareWebApplicationContext #  - Root WebApplicationContext: initialization completed in 110 ms
+[2019-01-21 18:26:13] INFO  EndpointLinksResolver.<init> #  - Exposing 2 endpoint(s) beneath base path '/actuator'
+[2019-01-21 18:26:13] INFO  TomcatWebServer.start #  - Tomcat started on port(s): 9522 (http) with context path ''
+[2019-01-21 18:26:13] INFO  TomcatWebServer.start #  - Tomcat started on port(s): 8082 (http) with context path ''
+[2019-01-21 18:26:14] INFO  DispatcherServlet.initServletBean #  - Initializing Servlet 'dispatcherServlet'
+[2019-01-21 18:26:14] INFO  DispatcherServlet.initServletBean #  - Completed initialization in 10 ms
