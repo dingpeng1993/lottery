@@ -1,34 +1,25 @@
 package com.dingpeng.java.exercise.lottery.resource.dao;
 
-import com.dingpeng.java.exercise.lottery.base.entity.PrizeEntity;
-import com.dingpeng.java.exercise.lottery.base.entity.PrizeEntityCriteria;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.session.RowBounds;
-
+import com.dingpeng.java.exercise.lottery.resource.entity.PrizeEntity;
 import java.util.List;
 
-public interface PrizeEntityDao {
-    int countByExample(PrizeEntityCriteria example);
+/**
+ * @author dp
+ * @date 2019.01.25
+ */
+public interface PrizeEntityDao extends BaseDao<PrizeEntity>{
 
-    int deleteByExample(PrizeEntityCriteria example);
+    /**
+     * 插入新建的多个奖品
+     * @param prizeEntities
+     * @return
+     */
+    Integer insertList(List<PrizeEntity> prizeEntities);
 
-    int deleteByPrimaryKey(Integer id);
-
-    int insert(PrizeEntity record);
-
-    int insertSelective(PrizeEntity record);
-
-    List<PrizeEntity> selectByExampleWithRowbounds(PrizeEntityCriteria example, RowBounds rowBounds);
-
-    List<PrizeEntity> selectByExample(PrizeEntityCriteria example);
-
-    PrizeEntity selectByPrimaryKey(Integer id);
-
-    int updateByExampleSelective(@Param("record") PrizeEntity record, @Param("example") PrizeEntityCriteria example);
-
-    int updateByExample(@Param("record") PrizeEntity record, @Param("example") PrizeEntityCriteria example);
-
-    int updateByPrimaryKeySelective(PrizeEntity record);
-
-    int updateByPrimaryKey(PrizeEntity record);
+    /**
+     * 根据奖品类型选择奖品
+     * @param type
+     * @return
+     */
+    List<PrizeEntity> selectByType(Integer type);
 }

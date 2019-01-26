@@ -10,4 +10,64 @@
     <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
   </resultMap>
 
+  <sql id="Table_Name">prize</sql>
+  <sql id="Total_Column_List">id, name, feature, type, create_time,update_time</sql>
+
+  <!--当主键是自增的情况下 useGeneratedKeys="true" keyProperty="id"添加成功后可以获得对象属性id的值-->
+  <insert id="insertOne" parameterType="com.dingpeng.java.exercise.lottery.base.entity.PrizeEntity" useGeneratedKeys="true" keyProperty="id">
+    INSERT INTO
+    <include refid="Table_Name"/>
+    (name, feature, type)
+    VALUES
+    (#{name}, #{feature}, #{type})
+  </insert>
+
+  <insert id="insertList" parameterType="List" useGeneratedKeys="true" keyProperty="id">
+    INSERT INTO
+    <include refid="Table_Name"/>
+    (name, feature, type)
+    VALUES
+    <foreach collection="list" item="item" separator=",">
+      (#{item.name}, #{item.feature}, #{item.type})
+    </foreach>
+  </insert>
+
+  <update id="updateByPrimaryKey" parameterType="com.dingpeng.java.exercise.lottery.base.entity.PrizeEntity">
+    UPDATE
+    <include refid="Table_Name"/>
+    <set>
+      <if test="name != null" >
+        name = #{name},
+      </if>
+      <if test="feature != null" >
+        feature = #{feature},
+      </if>
+      <if test="type != null" >
+        type = #{type},
+      </if>
+    </set>
+    where id = #{id}
+  </update>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from
+    <include refid="Table_Name"/>
+    where id = #{id}
+  </delete>
+
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="PrizeResultMap">
+    SELECT
+    <include refid="Total_Column_List"/>
+    FROM
+    <include refid="Table_Name"/>
+    WHERE id = #{id}
+  </select>
+
+    <select id="selectByType" parameterType="java.lang.Integer" resultMap="PrizeResultMap">
+        SELECT
+        <include refid="Total_Column_List"/>
+        FROM
+        <include refid="Table_Name"/>
+        WHERE type = #{type}
+    </select>
 </mapper>

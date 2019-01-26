@@ -62,13 +62,13 @@
     where id = #{id}
   </update>
 
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
     delete from
     <include refid="Table_Name"/>
     where id = #{id}
   </delete>
 
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="SegmentResultMap">
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="SegmentResultMap">
     SELECT
     <include refid="Total_Column_List"/>
     FROM

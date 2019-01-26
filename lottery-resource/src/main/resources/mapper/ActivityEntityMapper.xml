@@ -60,13 +60,13 @@
         where id = #{id}
     </update>
 
-    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
         delete from
         <include refid="Table_Name"/>
         where id = #{id}
     </delete>
 
-    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="ActivityResultMap">
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="ActivityResultMap">
         SELECT
         <include refid="Total_Column_List"/>
         FROM

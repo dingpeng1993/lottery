@@ -9,13 +9,8 @@ import java.util.List;
  * @author dp
  * @date 2019.01.25
  */
-public interface SegmentEntityDao {
-    /**
-     * 插入新建的一个批次
-     * @param segmentEntity
-     * @return
-     */
-    Integer insertOne(SegmentEntity segmentEntity);
+public interface SegmentEntityDao extends BaseDao<SegmentEntity> {
+
 
     /**
      * 插入新建的多个批次
@@ -24,27 +19,6 @@ public interface SegmentEntityDao {
      */
     Integer insertList(List<SegmentEntity> segmentEntities);
 
-    /**
-     * 根据id更新批次内容
-     * @param segmentEntity
-     * @return
-     */
-    Integer updateByPrimaryKey(SegmentEntity segmentEntity);
-
-    /**
-     * 根据活动id删除批次
-     * @param id
-     * @return
-     */
-    Integer deleteByPrimaryKey(Integer id);
-
-
-    /**
-     * 根据id选择批次
-     * @param id
-     * @return
-     */
-    SegmentEntity selectByPrimaryKey(Integer id);
 
     /**
      * 当前时间生效的批次

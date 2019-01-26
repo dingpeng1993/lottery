@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.dingpeng.java.exercise.lottery.resource.mapper.ConstraintEntityMapper" >
-  <resultMap id="BaseResultMap" type="com.dingpeng.java.exercise.lottery.resource.entity.ConstraintEntity" >
+<mapper namespace="com.dingpeng.java.exercise.lottery.resource.mapper.ConstraintEntityDao" >
+  <resultMap id="ConstraintResultMap" type="com.dingpeng.java.exercise.lottery.resource.entity.ConstraintEntity" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="name" property="name" jdbcType="VARCHAR" />
     <result column="activity_id" property="activityId" jdbcType="INTEGER" />
@@ -12,279 +12,67 @@
     <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
     <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
   </resultMap>
-  <sql id="Example_Where_Clause" >
-    <where >
-      <foreach collection="oredCriteria" item="criteria" separator="or" >
-        <if test="criteria.valid" >
-          <trim prefix="(" suffix=")" prefixOverrides="and" >
-            <foreach collection="criteria.criteria" item="criterion" >
-              <choose >
-                <when test="criterion.noValue" >
-                  and ${criterion.condition}
-                </when>
-                <when test="criterion.singleValue" >
-                  and ${criterion.condition} #{criterion.value}
-                </when>
-                <when test="criterion.betweenValue" >
-                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
-                </when>
-                <when test="criterion.listValue" >
-                  and ${criterion.condition}
-                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
-                    #{listItem}
-                  </foreach>
-                </when>
-              </choose>
-            </foreach>
-          </trim>
-        </if>
-      </foreach>
-    </where>
-  </sql>
-  <sql id="Update_By_Example_Where_Clause" >
-    <where >
-      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
-        <if test="criteria.valid" >
-          <trim prefix="(" suffix=")" prefixOverrides="and" >
-            <foreach collection="criteria.criteria" item="criterion" >
-              <choose >
-                <when test="criterion.noValue" >
-                  and ${criterion.condition}
-                </when>
-                <when test="criterion.singleValue" >
-                  and ${criterion.condition} #{criterion.value}
-                </when>
-                <when test="criterion.betweenValue" >
-                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
-                </when>
-                <when test="criterion.listValue" >
-                  and ${criterion.condition}
-                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
-                    #{listItem}
-                  </foreach>
-                </when>
-              </choose>
-            </foreach>
-          </trim>
-        </if>
-      </foreach>
-    </where>
-  </sql>
-  <sql id="Base_Column_List" >
-    id, name, activity_id, segment_id, type, constraint_key, constraint_value, create_time, 
-    update_time
-  </sql>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.dingpeng.java.exercise.lottery.base.entity.ConstraintEntityCriteria" >
-    select
-    <if test="distinct" >
-      distinct
-    </if>
-    <include refid="Base_Column_List" />
-    from constraint
-    <if test="_parameter != null" >
-      <include refid="Example_Where_Clause" />
-    </if>
-    <if test="orderByClause != null" >
-      order by ${orderByClause}
-    </if>
-  </select>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select 
-    <include refid="Base_Column_List" />
-    from constraint
-    where id = #{id,jdbcType=INTEGER}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
-    delete from constraint
-    where id = #{id,jdbcType=INTEGER}
-  </delete>
-  <delete id="deleteByExample" parameterType="com.dingpeng.java.exercise.lottery.base.entity.ConstraintEntityCriteria" >
-    delete from constraint
-    <if test="_parameter != null" >
-      <include refid="Example_Where_Clause" />
-    </if>
-  </delete>
-  <insert id="insert" parameterType="com.dingpeng.java.exercise.lottery.base.entity.ConstraintEntity" >
-    insert into constraint (id, name, activity_id, 
-      segment_id, type, constraint_key, 
-      constraint_value, create_time, update_time
-      )
-    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{activityId,jdbcType=INTEGER}, 
-      #{segmentId,jdbcType=INTEGER}, #{type,jdbcType=TINYINT}, #{constraintKey,jdbcType=VARCHAR}, 
-      #{constraintValue,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}
-      )
+
+  <sql id="Table_Name">constraint</sql>
+  <sql id="Total_Column_List">id, activity_id, segment_id, type, constraint_key, constraint_value, create_time,update_time</sql>
+
+  <!--当主键是自增的情况下 useGeneratedKeys="true" keyProperty="id"添加成功后可以获得对象属性id的值-->
+  <insert id="insertOne" parameterType="com.dingpeng.java.exercise.lottery.base.entity.ConstraintEntity" useGeneratedKeys="true" keyProperty="id">
+    INSERT INTO
+    <include refid="Table_Name"/>
+    (activity_id, segment_id, type, constraint_key, constraint_value)
+    VALUES
+    (#{activityId}, #{segmentId}, #{type}, #{constraintKey}, #{constraintValue})
   </insert>
-  <insert id="insertSelective" parameterType="com.dingpeng.java.exercise.lottery.base.entity.ConstraintEntity" >
-    insert into constraint
-    <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        id,
-      </if>
-      <if test="name != null" >
-        name,
-      </if>
-      <if test="activityId != null" >
-        activity_id,
+
+  <update id="updateByPrimaryKey" parameterType="com.dingpeng.java.exercise.lottery.base.entity.ConstraintEntity">
+    UPDATE
+    <include refid="Table_Name"/>
+    <set>
+      <if test="activityId!= null" >
+        activity_id = #{activityId},
       </if>
       <if test="segmentId != null" >
-        segment_id,
+        segment_id = #{segmentId},
       </if>
       <if test="type != null" >
-        type,
+        type = #{type},
       </if>
       <if test="constraintKey != null" >
-        constraint_key,
+        constraint_key = #{constraintKey},
       </if>
       <if test="constraintValue != null" >
-        constraint_value,
-      </if>
-      <if test="createTime != null" >
-        create_time,
-      </if>
-      <if test="updateTime != null" >
-        update_time,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        #{id,jdbcType=INTEGER},
-      </if>
-      <if test="name != null" >
-        #{name,jdbcType=VARCHAR},
-      </if>
-      <if test="activityId != null" >
-        #{activityId,jdbcType=INTEGER},
-      </if>
-      <if test="segmentId != null" >
-        #{segmentId,jdbcType=INTEGER},
-      </if>
-      <if test="type != null" >
-        #{type,jdbcType=TINYINT},
-      </if>
-      <if test="constraintKey != null" >
-        #{constraintKey,jdbcType=VARCHAR},
-      </if>
-      <if test="constraintValue != null" >
-        #{constraintValue,jdbcType=VARCHAR},
-      </if>
-      <if test="createTime != null" >
-        #{createTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="updateTime != null" >
-        #{updateTime,jdbcType=TIMESTAMP},
-      </if>
-    </trim>
-  </insert>
-  <select id="countByExample" parameterType="com.dingpeng.java.exercise.lottery.base.entity.ConstraintEntityCriteria" resultType="java.lang.Integer" >
-    select count(*) from constraint
-    <if test="_parameter != null" >
-      <include refid="Example_Where_Clause" />
-    </if>
-  </select>
-  <update id="updateByExampleSelective" parameterType="map" >
-    update constraint
-    <set >
-      <if test="record.id != null" >
-        id = #{record.id,jdbcType=INTEGER},
-      </if>
-      <if test="record.name != null" >
-        name = #{record.name,jdbcType=VARCHAR},
-      </if>
-      <if test="record.activityId != null" >
-        activity_id = #{record.activityId,jdbcType=INTEGER},
-      </if>
-      <if test="record.segmentId != null" >
-        segment_id = #{record.segmentId,jdbcType=INTEGER},
-      </if>
-      <if test="record.type != null" >
-        type = #{record.type,jdbcType=TINYINT},
-      </if>
-      <if test="record.constraintKey != null" >
-        constraint_key = #{record.constraintKey,jdbcType=VARCHAR},
-      </if>
-      <if test="record.constraintValue != null" >
-        constraint_value = #{record.constraintValue,jdbcType=VARCHAR},
-      </if>
-      <if test="record.createTime != null" >
-        create_time = #{record.createTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="record.updateTime != null" >
-        update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+        constraint_value = #{constraintValue},
       </if>
     </set>
-    <if test="_parameter != null" >
-      <include refid="Update_By_Example_Where_Clause" />
-    </if>
+    where id = #{id}
   </update>
-  <update id="updateByExample" parameterType="map" >
-    update constraint
-    set id = #{record.id,jdbcType=INTEGER},
-      name = #{record.name,jdbcType=VARCHAR},
-      activity_id = #{record.activityId,jdbcType=INTEGER},
-      segment_id = #{record.segmentId,jdbcType=INTEGER},
-      type = #{record.type,jdbcType=TINYINT},
-      constraint_key = #{record.constraintKey,jdbcType=VARCHAR},
-      constraint_value = #{record.constraintValue,jdbcType=VARCHAR},
-      create_time = #{record.createTime,jdbcType=TIMESTAMP},
-      update_time = #{record.updateTime,jdbcType=TIMESTAMP}
-    <if test="_parameter != null" >
-      <include refid="Update_By_Example_Where_Clause" />
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from
+    <include refid="Table_Name"/>
+    where id = #{id}
+  </delete>
+
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="ConstraintResultMap">
+    SELECT
+    <include refid="Total_Column_List"/>
+    FROM
+    <include refid="Table_Name"/>
+    WHERE id = #{id}
+  </select>
+
+  <select id="selectUsefulConstraint" parameterType="map" resultMap="ConstraintResultMap">
+    SELECT
+    <include refid="Total_Column_List"/>
+    FROM
+    <include refid="Table_Name"/>
+    WHERE 1 = 1
+    <if test="activityId != null and activityId != 0">
+      AND activity_id = #{activityId}
     </if>
-  </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.dingpeng.java.exercise.lottery.base.entity.ConstraintEntity" >
-    update constraint
-    <set >
-      <if test="name != null" >
-        name = #{name,jdbcType=VARCHAR},
-      </if>
-      <if test="activityId != null" >
-        activity_id = #{activityId,jdbcType=INTEGER},
-      </if>
-      <if test="segmentId != null" >
-        segment_id = #{segmentId,jdbcType=INTEGER},
-      </if>
-      <if test="type != null" >
-        type = #{type,jdbcType=TINYINT},
-      </if>
-      <if test="constraintKey != null" >
-        constraint_key = #{constraintKey,jdbcType=VARCHAR},
-      </if>
-      <if test="constraintValue != null" >
-        constraint_value = #{constraintValue,jdbcType=VARCHAR},
-      </if>
-      <if test="createTime != null" >
-        create_time = #{createTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="updateTime != null" >
-        update_time = #{updateTime,jdbcType=TIMESTAMP},
-      </if>
-    </set>
-    where id = #{id,jdbcType=INTEGER}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.dingpeng.java.exercise.lottery.base.entity.ConstraintEntity" >
-    update constraint
-    set name = #{name,jdbcType=VARCHAR},
-      activity_id = #{activityId,jdbcType=INTEGER},
-      segment_id = #{segmentId,jdbcType=INTEGER},
-      type = #{type,jdbcType=TINYINT},
-      constraint_key = #{constraintKey,jdbcType=VARCHAR},
-      constraint_value = #{constraintValue,jdbcType=VARCHAR},
-      create_time = #{createTime,jdbcType=TIMESTAMP},
-      update_time = #{updateTime,jdbcType=TIMESTAMP}
-    where id = #{id,jdbcType=INTEGER}
-  </update>
-  <select resultMap="BaseResultMap" parameterType="com.dingpeng.java.exercise.lottery.base.entity.ConstraintEntityCriteria" id="selectByExampleWithRowbounds" >
-    select
-    <if test="distinct" >
-      distinct
-    </if>
-    <include refid="Base_Column_List" />
-    from constraint
-    <if test="_parameter != null" >
-      <include refid="Example_Where_Clause" />
-    </if>
-    <if test="orderByClause != null" >
-      order by ${orderByClause}
+    <if test="segmentId != null and segmentId != 0">
+      AND segment_id = #{segmentId}
     </if>
   </select>
 </mapper>

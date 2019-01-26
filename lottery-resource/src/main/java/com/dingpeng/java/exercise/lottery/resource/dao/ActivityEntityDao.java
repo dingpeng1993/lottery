@@ -11,14 +11,7 @@ import java.util.List;
  * @author dp
  * @date 2019.01.25
  */
-public interface ActivityEntityDao {
-
-    /**
-     * 插入新建的一个活动
-     * @param activityEntity
-     * @return
-     */
-    Integer insertOne(ActivityEntity activityEntity);
+public interface ActivityEntityDao extends BaseDao<ActivityEntity> {
 
     /**
      * 插入新建的多个活动
@@ -26,28 +19,6 @@ public interface ActivityEntityDao {
      * @return
      */
     Integer insertList(List<ActivityEntity> activityEntities);
-
-    /**
-     * 根据id更新活动内容
-     * @param activityEntity
-     * @return
-     */
-    Integer updateByPrimaryKey(ActivityEntity activityEntity);
-
-    /**
-     * 根据活动id删除活动
-     * @param id
-     * @return
-     */
-    Integer deleteByPrimaryKey(Integer id);
-
-
-    /**
-     * 根据id选择活动
-     * @param id
-     * @return
-     */
-    ActivityEntity selectByPrimaryKey(Integer id);
 
     /**
      * 当前时间生效的活动
