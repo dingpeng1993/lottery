@@ -1,24 +1,24 @@
-[2019-01-25 17:40:41] INFO  ApplicationStarter.logStarting #  - Starting ApplicationStarter on DESKTOP-G8I4D3R with PID 71572 (C:\Users\admin\IdeaProjects\lottery\lottery-api\target\classes started by admin in C:\Users\admin\IdeaProjects\lottery)
-[2019-01-25 17:40:41] INFO  ApplicationStarter.logStartupProfileInfo #  - The following profiles are active: dev
-[2019-01-25 17:40:45] INFO  Http11NioProtocol.log #  - Initializing ProtocolHandler ["http-nio-8082"]
-[2019-01-25 17:40:45] INFO  StandardService.log #  - Starting service [Tomcat]
-[2019-01-25 17:40:45] INFO  StandardEngine.log #  - Starting Servlet Engine: Apache Tomcat/9.0.13
-[2019-01-25 17:40:45] INFO  AprLifecycleListener.log #  - An older version [1.2.16] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.18]
-[2019-01-25 17:40:45] INFO  AprLifecycleListener.log #  - Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
-[2019-01-25 17:40:45] INFO  AprLifecycleListener.log #  - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-[2019-01-25 17:40:45] INFO  AprLifecycleListener.log #  - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-[2019-01-25 17:40:46] INFO  AprLifecycleListener.log #  - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
-[2019-01-25 17:40:46] INFO  [/].log #  - Initializing Spring embedded WebApplicationContext
-[2019-01-25 17:40:48] INFO  Http11NioProtocol.log #  - Initializing ProtocolHandler ["http-nio-127.0.0.1-9522"]
-[2019-01-25 17:40:48] INFO  StandardService.log #  - Starting service [Tomcat]
-[2019-01-25 17:40:48] INFO  StandardEngine.log #  - Starting Servlet Engine: Apache Tomcat/9.0.13
-[2019-01-25 17:40:48] INFO  [/].log #  - Initializing Spring embedded WebApplicationContext
-[2019-01-25 17:40:48] INFO  Http11NioProtocol.log #  - Starting ProtocolHandler ["http-nio-127.0.0.1-9522"]
-[2019-01-25 17:40:48] INFO  NioSelectorPool.log #  - Using a shared selector for servlet write/read
-[2019-01-25 17:40:48] INFO  DocumentationPluginsBootstrapper.start #  - Context refreshed
-[2019-01-25 17:40:48] INFO  DocumentationPluginsBootstrapper.start #  - Found 1 custom documentation plugin(s)
-[2019-01-25 17:40:48] INFO  ApiListingReferenceScanner.scan #  - Scanning for api listing references
-[2019-01-25 17:40:48] INFO  Http11NioProtocol.log #  - Starting ProtocolHandler ["http-nio-8082"]
-[2019-01-25 17:40:48] INFO  NioSelectorPool.log #  - Using a shared selector for servlet write/read
-[2019-01-25 17:40:48] INFO  ApplicationStarter.logStarted #  - Started ApplicationStarter in 8.249 seconds (JVM running for 11.432)
-[2019-01-25 17:40:49] INFO  [/].log #  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2019-02-19 11:33:25] INFO  ApplicationStarter.logStarting #  - Starting ApplicationStarter on DESKTOP-G8I4D3R with PID 6776 (C:\Users\admin\IdeaProjects\lottery\lottery-api\target\classes started by admin in C:\Users\admin\IdeaProjects\lottery)
+[2019-02-19 11:33:25] INFO  ApplicationStarter.logStartupProfileInfo #  - The following profiles are active: dev
+[2019-02-19 11:33:28] INFO  Http11NioProtocol.log #  - Initializing ProtocolHandler ["http-nio-8082"]
+[2019-02-19 11:33:28] INFO  StandardService.log #  - Starting service [Tomcat]
+[2019-02-19 11:33:28] INFO  StandardEngine.log #  - Starting Servlet Engine: Apache Tomcat/9.0.13
+[2019-02-19 11:33:28] INFO  AprLifecycleListener.log #  - An older version [1.2.16] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.18]
+[2019-02-19 11:33:28] INFO  AprLifecycleListener.log #  - Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+[2019-02-19 11:33:28] INFO  AprLifecycleListener.log #  - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[2019-02-19 11:33:28] INFO  AprLifecycleListener.log #  - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2019-02-19 11:33:29] INFO  AprLifecycleListener.log #  - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+[2019-02-19 11:33:30] INFO  [/].log #  - Initializing Spring embedded WebApplicationContext
+[2019-02-19 11:33:33] INFO  Http11NioProtocol.log #  - Initializing ProtocolHandler ["http-nio-127.0.0.1-9522"]
+[2019-02-19 11:33:33] INFO  StandardService.log #  - Starting service [Tomcat]
+[2019-02-19 11:33:33] INFO  StandardEngine.log #  - Starting Servlet Engine: Apache Tomcat/9.0.13
+[2019-02-19 11:33:33] INFO  [/].log #  - Initializing Spring embedded WebApplicationContext
+[2019-02-19 11:33:33] INFO  Http11NioProtocol.log #  - Starting ProtocolHandler ["http-nio-127.0.0.1-9522"]
+[2019-02-19 11:33:33] INFO  NioSelectorPool.log #  - Using a shared selector for servlet write/read
+[2019-02-19 11:33:33] INFO  DocumentationPluginsBootstrapper.start #  - Context refreshed
+[2019-02-19 11:33:33] INFO  DocumentationPluginsBootstrapper.start #  - Found 1 custom documentation plugin(s)
+[2019-02-19 11:33:33] INFO  ApiListingReferenceScanner.scan #  - Scanning for api listing references
+[2019-02-19 11:33:34] INFO  Http11NioProtocol.log #  - Starting ProtocolHandler ["http-nio-8082"]
+[2019-02-19 11:33:34] INFO  NioSelectorPool.log #  - Using a shared selector for servlet write/read
+[2019-02-19 11:33:34] INFO  ApplicationStarter.logStarted #  - Started ApplicationStarter in 10.397 seconds (JVM running for 13.917)
+[2019-02-19 11:33:35] INFO  [/].log #  - Initializing Spring DispatcherServlet 'dispatcherServlet'

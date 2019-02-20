@@ -1,4 +1,4 @@
-package com.dingpeng.java.exercise.lottery.api.web.response;
+package com.dingpeng.java.exercise.lottery.common.response;
 
 
 import com.dingpeng.java.exercise.lottery.common.enums.StatusCode;

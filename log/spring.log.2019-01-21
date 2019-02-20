@@ -119,11 +119,11 @@
 [2019-01-21 18:08:24] INFO  DispatcherServlet.initServletBean #  - Initializing Servlet 'dispatcherServlet'
 [2019-01-21 18:08:24] INFO  DispatcherServlet.initServletBean #  - Completed initialization in 0 ms
 [2019-01-21 18:17:20] INFO  RepositoryConfigurationDelegate.registerRepositoriesIn #  - Bootstrapping Spring Data repositories in DEFAULT mode.
-[2019-01-21 18:17:20] INFO  RepositoryConfigurationDelegate.registerRepositoriesIn #  - Finished Spring Data repository scanning in 11ms. Found 0 repository interfaces.
+[2019-01-21 18:17:20] INFO  RepositoryConfigurationDelegate.registerRepositoriesIn #  - Finished Spring Data com.dingpeng.java.exercise.lottery.domain.repository scanning in 11ms. Found 0 com.dingpeng.java.exercise.lottery.domain.repository interfaces.
 [2019-01-21 18:17:20] ERROR SpringApplication.reportFailure #  - Application run failed
 java.lang.NoClassDefFoundError: javax/persistence/EntityManagerFactory
 	at org.springframework.data.jpa.util.BeanDefinitionUtils.<clinit>(BeanDefinitionUtils.java:54)
-	at org.springframework.data.jpa.repository.support.EntityManagerBeanDefinitionRegistrarPostProcessor.postProcessBeanFactory(EntityManagerBeanDefinitionRegistrarPostProcessor.java:71)
+	at org.springframework.data.jpa.com.dingpeng.java.exercise.lottery.domain.repository.support.EntityManagerBeanDefinitionRegistrarPostProcessor.postProcessBeanFactory(EntityManagerBeanDefinitionRegistrarPostProcessor.java:71)
 	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:286)
 	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:174)
 	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:691)
@@ -140,11 +140,11 @@ Caused by: java.lang.ClassNotFoundException: javax.persistence.EntityManagerFact
 	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
 	... 11 common frames omitted
 [2019-01-21 18:17:40] INFO  RepositoryConfigurationDelegate.registerRepositoriesIn #  - Bootstrapping Spring Data repositories in DEFAULT mode.
-[2019-01-21 18:17:40] INFO  RepositoryConfigurationDelegate.registerRepositoriesIn #  - Finished Spring Data repository scanning in 0ms. Found 0 repository interfaces.
+[2019-01-21 18:17:40] INFO  RepositoryConfigurationDelegate.registerRepositoriesIn #  - Finished Spring Data com.dingpeng.java.exercise.lottery.domain.repository scanning in 0ms. Found 0 com.dingpeng.java.exercise.lottery.domain.repository interfaces.
 [2019-01-21 18:17:40] ERROR SpringApplication.reportFailure #  - Application run failed
 java.lang.NoClassDefFoundError: javax/persistence/EntityManagerFactory
 	at org.springframework.data.jpa.util.BeanDefinitionUtils.<clinit>(BeanDefinitionUtils.java:54)
-	at org.springframework.data.jpa.repository.support.EntityManagerBeanDefinitionRegistrarPostProcessor.postProcessBeanFactory(EntityManagerBeanDefinitionRegistrarPostProcessor.java:71)
+	at org.springframework.data.jpa.com.dingpeng.java.exercise.lottery.domain.repository.support.EntityManagerBeanDefinitionRegistrarPostProcessor.postProcessBeanFactory(EntityManagerBeanDefinitionRegistrarPostProcessor.java:71)
 	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:286)
 	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:174)
 	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:691)
@@ -161,11 +161,11 @@ Caused by: java.lang.ClassNotFoundException: javax.persistence.EntityManagerFact
 	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
 	... 11 common frames omitted
 [2019-01-21 18:18:33] INFO  RepositoryConfigurationDelegate.registerRepositoriesIn #  - Bootstrapping Spring Data repositories in DEFAULT mode.
-[2019-01-21 18:18:33] INFO  RepositoryConfigurationDelegate.registerRepositoriesIn #  - Finished Spring Data repository scanning in 10ms. Found 0 repository interfaces.
+[2019-01-21 18:18:33] INFO  RepositoryConfigurationDelegate.registerRepositoriesIn #  - Finished Spring Data com.dingpeng.java.exercise.lottery.domain.repository scanning in 10ms. Found 0 com.dingpeng.java.exercise.lottery.domain.repository interfaces.
 [2019-01-21 18:18:33] ERROR SpringApplication.reportFailure #  - Application run failed
 java.lang.NoClassDefFoundError: javax/persistence/EntityManagerFactory
 	at org.springframework.data.jpa.util.BeanDefinitionUtils.<clinit>(BeanDefinitionUtils.java:54)
-	at org.springframework.data.jpa.repository.support.EntityManagerBeanDefinitionRegistrarPostProcessor.postProcessBeanFactory(EntityManagerBeanDefinitionRegistrarPostProcessor.java:71)
+	at org.springframework.data.jpa.com.dingpeng.java.exercise.lottery.domain.repository.support.EntityManagerBeanDefinitionRegistrarPostProcessor.postProcessBeanFactory(EntityManagerBeanDefinitionRegistrarPostProcessor.java:71)
 	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:286)
 	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:174)
 	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:691)

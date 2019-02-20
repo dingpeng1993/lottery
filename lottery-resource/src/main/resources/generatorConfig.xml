@@ -3,7 +3,7 @@
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
 <generatorConfiguration>
     <!--<classPathEntry
-            location="C:\Users\admin\.m2\repository\mysql\mysql-connector-java\8.0.13\mysql-connector-java-8.0.13.jar"/>-->
+            location="C:\Users\admin\.m2\com.dingpeng.java.exercise.lottery.domain.repository\mysql\mysql-connector-java\8.0.13\mysql-connector-java-8.0.13.jar"/>-->
     <context id="lottery" targetRuntime="Mybatis3">
 
         <!-- defaultModelType="hierarchical" -->

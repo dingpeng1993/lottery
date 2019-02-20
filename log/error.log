@@ -1,7 +1,7 @@
 [2019-01-21 18:17:20] ERROR SpringApplication.reportFailure #  - Application run failed
 java.lang.NoClassDefFoundError: javax/persistence/EntityManagerFactory
 	at org.springframework.data.jpa.util.BeanDefinitionUtils.<clinit>(BeanDefinitionUtils.java:54)
-	at org.springframework.data.jpa.repository.support.EntityManagerBeanDefinitionRegistrarPostProcessor.postProcessBeanFactory(EntityManagerBeanDefinitionRegistrarPostProcessor.java:71)
+	at org.springframework.data.jpa.com.dingpeng.java.exercise.lottery.domain.repository.support.EntityManagerBeanDefinitionRegistrarPostProcessor.postProcessBeanFactory(EntityManagerBeanDefinitionRegistrarPostProcessor.java:71)
 	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:286)
 	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:174)
 	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:691)
@@ -20,7 +20,7 @@ Caused by: java.lang.ClassNotFoundException: javax.persistence.EntityManagerFact
 [2019-01-21 18:17:40] ERROR SpringApplication.reportFailure #  - Application run failed
 java.lang.NoClassDefFoundError: javax/persistence/EntityManagerFactory
 	at org.springframework.data.jpa.util.BeanDefinitionUtils.<clinit>(BeanDefinitionUtils.java:54)
-	at org.springframework.data.jpa.repository.support.EntityManagerBeanDefinitionRegistrarPostProcessor.postProcessBeanFactory(EntityManagerBeanDefinitionRegistrarPostProcessor.java:71)
+	at org.springframework.data.jpa.com.dingpeng.java.exercise.lottery.domain.repository.support.EntityManagerBeanDefinitionRegistrarPostProcessor.postProcessBeanFactory(EntityManagerBeanDefinitionRegistrarPostProcessor.java:71)
 	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:286)
 	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:174)
 	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:691)
@@ -39,7 +39,7 @@ Caused by: java.lang.ClassNotFoundException: javax.persistence.EntityManagerFact
 [2019-01-21 18:18:33] ERROR SpringApplication.reportFailure #  - Application run failed
 java.lang.NoClassDefFoundError: javax/persistence/EntityManagerFactory
 	at org.springframework.data.jpa.util.BeanDefinitionUtils.<clinit>(BeanDefinitionUtils.java:54)
-	at org.springframework.data.jpa.repository.support.EntityManagerBeanDefinitionRegistrarPostProcessor.postProcessBeanFactory(EntityManagerBeanDefinitionRegistrarPostProcessor.java:71)
+	at org.springframework.data.jpa.com.dingpeng.java.exercise.lottery.domain.repository.support.EntityManagerBeanDefinitionRegistrarPostProcessor.postProcessBeanFactory(EntityManagerBeanDefinitionRegistrarPostProcessor.java:71)
 	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:286)
 	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:174)
 	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:691)

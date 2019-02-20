@@ -29,22 +29,22 @@ public class PrizePoolEntity extends BaseEntity{
     @Data
     public static class PrizeLimit{
         @JsonProperty("id")
-        private Integer prize_id;
+        private Integer prizeId;
         /**
          * 该奖品总数
          */
-        @JsonProperty("total")
+        @JsonProperty("all")
         private Integer totalNum;
 
         /**
          * 该奖品剩余数量
          */
-        @JsonProperty("exist")
+        @JsonProperty("ex")
         private Integer existNum;
         /**
          * 可以中将奖品池奖品的人群Id
          */
-        @JsonProperty("grp")
+        @JsonProperty("gid")
         private String groupIds;
     }
 

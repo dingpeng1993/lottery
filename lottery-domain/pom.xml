@@ -12,5 +12,8 @@
     <artifactId>lottery-domain</artifactId>
     <!--代表生成jar文件-->
     <packaging>jar</packaging>
+    <dependencies>
+
+    </dependencies>
 
 </project>

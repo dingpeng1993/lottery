@@ -1,7 +1,5 @@
 package com.dingpeng.java.exercise.lottery.common.enums;
 
-import lombok.Data;
-
 /**
  * @author dp
  *
@@ -24,6 +22,8 @@ public enum StatusCode {
     DATA_FORMAT_ERROR(10005, "数据格式化异常"),
 
     HTTP_ACESS_ERROR(10006, "HTTP访问异常"),
+
+    PARAMETER_IS_ILLEGAL(10007,"参数异常"),
 
     DB_ACCESS_ERROR(80000, "数据库异常:%s"),
 
@@ -53,5 +53,9 @@ public enum StatusCode {
 
     public String getMsg(Object... objects) {
         return msg;
+    }
+
+    public String getCode(){
+        return name();
     }
 }
