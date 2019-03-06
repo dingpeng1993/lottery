@@ -13,9 +13,9 @@ public class ConstraintEntity extends BaseEntity{
 
     private String name;
 
-    private Integer activityId;
+    private Long activityId;
 
-    private Integer segmentId;
+    private Long segmentId;
     /**
      * 约束的类型
      */

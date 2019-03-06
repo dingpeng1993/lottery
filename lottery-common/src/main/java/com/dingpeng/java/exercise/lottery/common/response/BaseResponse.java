@@ -53,4 +53,26 @@ public class BaseResponse<T>  {
         return create(StatusCode.SERVICE_RUN_SUCCESS, data);
     }
 
+    public static <T> BaseResponse<T> fail(StatusCode statusCode, String message){
+        BaseResponse<T> baseResponse = new BaseResponse<>();
+        baseResponse.setStatus(statusCode.getStatus());
+        baseResponse.setSuccess(statusCode.isSuccess());
+        baseResponse.setMsg(String.format(statusCode.getMsg(),message));
+        baseResponse.setData(null);
+        return baseResponse;
+    }
+
+    public static <T> BaseResponse<T> fail(StatusCode statusCode){
+        return fail(statusCode, "");
+    }
+
+    public static <T> BaseResponse<T> fail( int status, String message){
+        BaseResponse<T> baseResponse = new BaseResponse<>();
+        baseResponse.setData(null);
+        baseResponse.setMsg(message);
+        baseResponse.setSuccess(false);
+        baseResponse.setStatus(status);
+        return baseResponse;
+    }
+
 }

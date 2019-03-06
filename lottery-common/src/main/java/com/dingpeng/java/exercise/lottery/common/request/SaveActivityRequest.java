@@ -1,12 +1,13 @@
 package com.dingpeng.java.exercise.lottery.common.request;
 
+
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import org.hibernate.validator.constraints.Range;
-
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 /**
@@ -36,7 +37,7 @@ public class SaveActivityRequest {
     private Integer status;
 
     @Valid
-    @NotEmpty(message = "活动批次不能为空")
+    @NotNull(message = "活动批次不能为空")
     private List<Segment> segmentList;
 
     @Data
@@ -63,37 +64,43 @@ public class SaveActivityRequest {
         @Valid
         @NotEmpty(message = "规则列表不能为空")
         private List<Rule> ruleList;
+
+        @Data
+        public static class Prize{
+
+            @NotBlank(message = "奖品名称不能为空")
+            private String name;
+
+            @NotBlank(message = "奖品特性不能为空")
+            private String feature;
+
+            @Range(min = 1, max = 4, message = "1为实物，2为券，3为奖励金，4为码")
+            private Integer type;
+
+            @NotEmpty(message = "可中奖用户Id不能为空")
+            private String groupIds;
+
+            private Integer total;
+
+            private Integer exist;
+        }
+
+
+        @Data
+        public static class Rule{
+            @NotBlank(message = "奖励规则名称不能为空")
+            private String name;
+
+            @Range(min = 1, max = 2, message = "规则范围：1为准入规则， 2为奖励规则")
+            private Integer type;
+
+            @NotBlank(message = "规则键不能为空")
+            private String key;
+
+            @NotBlank(message = "规则值不能为空")
+            private String value;
+        }
     }
 
-    @Data
-    public static class Prize{
 
-        @NotBlank(message = "奖品名称不能为空")
-        private String name;
-
-        @NotBlank(message = "奖品特性不能为空")
-        private String feature;
-
-        @Range(min = 1, max = 4, message = "1为实物，2为券，3为奖励金，4为码")
-        private Integer type;
-
-        @NotEmpty(message = "可中奖用户Id不能为空")
-        private List<Integer> groupIds;
-    }
-
-
-    @Data
-    public static class Rule{
-        @NotBlank(message = "奖励规则名称不能为空")
-        private String name;
-
-        @Range(min = 1, max = 2, message = "规则范围：1为准入规则， 2为奖励规则")
-        private Integer type;
-
-        @NotBlank(message = "规则键不能为空")
-        private String key;
-
-        @NotBlank(message = "规则值不能为空")
-        private String value;
-    }
 }

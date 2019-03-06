@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.dingpeng.java.exercise.lottery.resource.mapper.PrizeEntityDao" >
+<mapper namespace="com.dingpeng.java.exercise.lottery.resource.dao.PrizeEntityDao" >
   <resultMap id="PrizeResultMap" type="com.dingpeng.java.exercise.lottery.resource.entity.PrizeEntity" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="name" property="name" jdbcType="VARCHAR" />
@@ -14,7 +14,7 @@
   <sql id="Total_Column_List">id, name, feature, type, create_time,update_time</sql>
 
   <!--当主键是自增的情况下 useGeneratedKeys="true" keyProperty="id"添加成功后可以获得对象属性id的值-->
-  <insert id="insertOne" parameterType="com.dingpeng.java.exercise.lottery.base.entity.PrizeEntity" useGeneratedKeys="true" keyProperty="id">
+  <insert id="insertOne" parameterType="com.dingpeng.java.exercise.lottery.resource.entity.PrizeEntity" useGeneratedKeys="true" keyProperty="id">
     INSERT INTO
     <include refid="Table_Name"/>
     (name, feature, type)
@@ -32,7 +32,7 @@
     </foreach>
   </insert>
 
-  <update id="updateByPrimaryKey" parameterType="com.dingpeng.java.exercise.lottery.base.entity.PrizeEntity">
+  <update id="updateByPrimaryKey" parameterType="com.dingpeng.java.exercise.lottery.resource.entity.PrizeEntity">
     UPDATE
     <include refid="Table_Name"/>
     <set>

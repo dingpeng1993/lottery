@@ -1,7 +1,9 @@
 package com.dingpeng.java.exercise.lottery.resource.dao;
 
+
 import com.dingpeng.java.exercise.lottery.resource.entity.SegmentEntity;
 import org.apache.ibatis.annotations.Param;
+
 import java.util.Date;
 import java.util.List;
 

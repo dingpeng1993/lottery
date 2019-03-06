@@ -16,7 +16,7 @@ public class SegmentEntity extends BaseEntity{
 
     private String description;
 
-    private Integer activityId;
+    private Long activityId;
 
     /**
      * 批次开始时间

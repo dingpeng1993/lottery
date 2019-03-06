@@ -43,6 +43,7 @@ public class DataSourceConfig {
 
     @Bean("dataSource")
     public DataSource buildDataSource(){
+        System.out.println("DataSource被扫描到");
         // 数据库连接池
         DruidDataSource dataSource = new DruidDataSource();
 

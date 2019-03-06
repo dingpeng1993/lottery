@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.dingpeng.java.exercise.lottery.resource.mapper.ConstraintEntityDao" >
+<mapper namespace="com.dingpeng.java.exercise.lottery.resource.dao.ConstraintEntityDao" >
   <resultMap id="ConstraintResultMap" type="com.dingpeng.java.exercise.lottery.resource.entity.ConstraintEntity" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="name" property="name" jdbcType="VARCHAR" />
@@ -13,23 +13,36 @@
     <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
   </resultMap>
 
-  <sql id="Table_Name">constraint</sql>
-  <sql id="Total_Column_List">id, activity_id, segment_id, type, constraint_key, constraint_value, create_time,update_time</sql>
+  <sql id="Table_Name">draw_rule</sql>
+  <sql id="Total_Column_List">id, name, activity_id, segment_id, type, constraint_key, constraint_value, create_time,update_time</sql>
 
   <!--当主键是自增的情况下 useGeneratedKeys="true" keyProperty="id"添加成功后可以获得对象属性id的值-->
-  <insert id="insertOne" parameterType="com.dingpeng.java.exercise.lottery.base.entity.ConstraintEntity" useGeneratedKeys="true" keyProperty="id">
+  <insert id="insertOne" parameterType="com.dingpeng.java.exercise.lottery.resource.entity.ConstraintEntity" useGeneratedKeys="true" keyProperty="id">
     INSERT INTO
     <include refid="Table_Name"/>
-    (activity_id, segment_id, type, constraint_key, constraint_value)
+    (name, activity_id, segment_id, type, constraint_key, constraint_value)
     VALUES
-    (#{activityId}, #{segmentId}, #{type}, #{constraintKey}, #{constraintValue})
+    (#{name},#{activityId}, #{segmentId}, #{type}, #{constraintKey}, #{constraintValue})
   </insert>
 
-  <update id="updateByPrimaryKey" parameterType="com.dingpeng.java.exercise.lottery.base.entity.ConstraintEntity">
+  <insert id="insertList" parameterType="List" useGeneratedKeys="true" keyProperty="id">
+    INSERT INTO
+    <include refid="Table_Name"/>
+    (name, activity_id, segment_id, type, constraint_key, constraint_value)
+    VALUES
+    <foreach collection="list" item="item" separator=",">
+      (#{item.name}, #{item.activityId}, #{item.segmentId}, #{item.type}, #{item.constraintKey}, #{item.constraintValue})
+    </foreach>
+  </insert>
+
+  <update id="updateByPrimaryKey" parameterType="com.dingpeng.java.exercise.lottery.resource.entity.ConstraintEntity">
     UPDATE
     <include refid="Table_Name"/>
     <set>
-      <if test="activityId!= null" >
+      <if test="name !=null">
+        name = #{name},
+      </if>
+      <if test="activityId != null" >
         activity_id = #{activityId},
       </if>
       <if test="segmentId != null" >

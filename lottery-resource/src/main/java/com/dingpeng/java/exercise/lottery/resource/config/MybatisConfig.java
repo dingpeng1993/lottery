@@ -15,7 +15,7 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.TransactionManagementConfigurer;
 
-
+import javax.annotation.Resource;
 import javax.sql.DataSource;
 
 /**
@@ -32,7 +32,7 @@ import javax.sql.DataSource;
 @Slf4j
 public class MybatisConfig implements TransactionManagementConfigurer{
 
-    @Autowired
+    @Resource(name = "dataSource")
     private DataSource dataSource;
 
     @Bean("sqlSessionFactory")
@@ -42,7 +42,7 @@ public class MybatisConfig implements TransactionManagementConfigurer{
         //添加mapper的xml路径
         ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
         try {
-            sqlSessionFactoryBean.setMapperLocations(resolver.getResources("classpath:mapper/.xml"));
+            sqlSessionFactoryBean.setMapperLocations(resolver.getResources("classpath:mapper/*.xml"));
             return sqlSessionFactoryBean.getObject();
         } catch (Exception e) {
             log.error("MybatisConfig Exception:{}",e);

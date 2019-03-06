@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.dingpeng.java.exercise.lottery.resource.mapper.PrizeRecordEntityDao" >
+<mapper namespace="com.dingpeng.java.exercise.lottery.resource.dao.PrizeRecordEntityDao" >
   <resultMap id="PrizeRecordResultMap" type="com.dingpeng.java.exercise.lottery.resource.entity.PrizeRecordEntity" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="activity_id" property="activityId" jdbcType="INTEGER" />
@@ -16,7 +16,7 @@
     <sql id="Total_Column_List">id, activity_id, segment_id, prize_id, user_id, phone, win_schedule, create_time,update_time</sql>
 
     <!--当主键是自增的情况下 useGeneratedKeys="true" keyProperty="id"添加成功后可以获得对象属性id的值-->
-    <insert id="insertOne" parameterType="com.dingpeng.java.exercise.lottery.base.entity.PrizeRecordEntity" useGeneratedKeys="true" keyProperty="id">
+    <insert id="insertOne" parameterType="com.dingpeng.java.exercise.lottery.resource.entity.PrizeRecordEntity" useGeneratedKeys="true" keyProperty="id">
         INSERT INTO
         <include refid="Table_Name"/>
         (activity_id, segment_id, prize_id, user_id, phone, win_schedule)
@@ -24,7 +24,7 @@
         (#{activityId}, #{segmentId}, #{prizeId}, #{userId}, #{phone},#{winSchedule})
     </insert>
 
-    <update id="updateByPrimaryKey" parameterType="com.dingpeng.java.exercise.lottery.base.entity.PrizeRecordEntity">
+    <update id="updateByPrimaryKey" parameterType="com.dingpeng.java.exercise.lottery.resource.entity.PrizeRecordEntity">
         UPDATE
         <include refid="Table_Name"/>
         <set>
@@ -64,7 +64,7 @@
         WHERE id = #{id}
     </select>
 
-    <select id="selectByCondition" parameterType="map" resultMap="PrizeRecordMap">
+    <select id="selectByCondition" parameterType="map" resultMap="PrizeRecordResultMap">
         SELECT
         <include refid="Total_Column_List"/>
         FROM

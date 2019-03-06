@@ -1,56 +1,69 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.dingpeng.java.exercise.lottery.resource.mapper.PrizePoolEntityDao" >
-  <resultMap id="PrizePoolResultMap" type="com.dingpeng.java.exercise.lottery.resource.entity.PrizePoolEntity" >
-    <id column="id" property="id" jdbcType="INTEGER" />
-    <result column="activity_id" property="activityId" jdbcType="INTEGER" />
-    <result column="segment_id" property="segmentId" jdbcType="INTEGER" />
-    <result column="prize_list" property="prizeList" jdbcType="VARCHAR" />
-    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
-    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
-  </resultMap>
+<mapper namespace="com.dingpeng.java.exercise.lottery.resource.dao.PrizePoolEntityDao">
+    <resultMap id="PrizePoolResultMap" type="com.dingpeng.java.exercise.lottery.resource.entity.PrizePoolEntity">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="activity_id" property="activityId" jdbcType="INTEGER"/>
+        <result column="segment_id" property="segmentId" jdbcType="INTEGER"/>
+        <result column="prize_id" property="prizeId" jdbcType="INTEGER"/>
+        <result column="total" property="total" jdbcType="INTEGER"/>
+        <result column="exist" property="exist" jdbcType="INTEGER"/>
+        <result column="group_ids" property="groupIds" jdbcType="VARCHAR"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
+    </resultMap>
 
     <sql id="Table_Name">prize_pool</sql>
-    <sql id="Total_Column_List">id, activity_id, segment_id, prize_list, create_time, update_time</sql>
+    <sql id="Total_Column_List">id, activity_id, segment_id, prize_id, total, exist, group_ids, create_time, update_time</sql>
 
     <!--当主键是自增的情况下 useGeneratedKeys="true" keyProperty="id"添加成功后可以获得对象属性id的值-->
-    <insert id="insertOne" parameterType="com.dingpeng.java.exercise.lottery.base.entity.PrizePoolEntity" useGeneratedKeys="true" keyProperty="id">
+    <insert id="insertOne" parameterType="com.dingpeng.java.exercise.lottery.resource.entity.PrizePoolEntity"
+            useGeneratedKeys="true" keyProperty="id">
         INSERT INTO
         <include refid="Table_Name"/>
-        (activity_id, segment_id, prize_list)
+        (activity_id, segment_id, prize_id, total, exist, group_ids)
         VALUES
-        (#{activityId}, #{segmentId}, #{prizeList})
+        (#{activityId}, #{segmentId}, #{prizeId}, #{total}, #{exist}, #{groupIds})
     </insert>
 
     <insert id="insertList" parameterType="List" useGeneratedKeys="true" keyProperty="id">
         INSERT INTO
         <include refid="Table_Name"/>
-        (activity_id, segment_id, prize_list)
+        (activity_id, segment_id, prize_id, total, exist, group_ids)
         VALUES
         <foreach collection="list" item="item" separator=",">
-            #{item.activityId}, #{item.segmentId}, #{item.prizeList})
+            (#{item.activityId}, #{item.segmentId}, #{item.prizeId}, #{item.total}, #{item.exist}, #{item.groupIds})
         </foreach>
     </insert>
 
-    <update id="updateByPrimaryKey" parameterType="com.dingpeng.java.exercise.lottery.base.entity.PrizePoolEntity">
+    <update id="updateByPrimaryKey" parameterType="com.dingpeng.java.exercise.lottery.resource.entity.PrizePoolEntity">
         UPDATE
         <include refid="Table_Name"/>
         <set>
-            <if test="activityId != null" >
+            <if test="activityId != null">
                 activity_id = #{activityId},
             </if>
-            <if test="segmentId != null" >
+            <if test="segmentId != null">
                 segment_id = #{segmentId},
             </if>
-            <if test = "prizeList != null">
-                prize_list = #{prizeList}
+            <if test="prizeId != null">
+                prize_id = #{prizeid}
+            </if>
+            <if test="total != null">
+                total = #{toal}
+            </if>
+            <if test="exist != null">
+                exist = #{exist};
+            </if>
+            <if test="groupIds != null">
+                group_ids = #{groupIds}
             </if>
 
         </set>
         where id = #{id}
     </update>
 
-    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
         delete from
         <include refid="Table_Name"/>
         where id = #{id}
@@ -70,7 +83,7 @@
         <include refid="Total_Column_List"/>
         FROM
         <include refid="Table_Name"/>
-        WHERE  1 = 1
+        WHERE 1 = 1
         <!-- <等特殊字符要放在<![CDATA[ ]]>-->
         <if test="activityId != null and activityId != 0">
             and activity_id = #{activityId}

@@ -10,7 +10,7 @@ import java.util.Date;
  */
 
 @Data
-public class ActivityEntity extends BaseEntity{
+public class ActivityEntity extends BaseEntity {
 
     private String name;
 
@@ -27,12 +27,5 @@ public class ActivityEntity extends BaseEntity{
      * 活动状态
      */
     private Integer status;
-
-
-
-
-
-
-
 
 }

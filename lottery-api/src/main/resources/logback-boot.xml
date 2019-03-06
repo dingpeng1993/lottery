@@ -80,14 +80,20 @@
 
     <logger name="org.springframework" level="${root.log.level}" additivity="false">
         <appender-ref ref="SPRING_FILE"/>
-        <appender-ref ref="ERROR_FILE" />
+        <appender-ref ref="STDOUT"/>
     </logger>
     <logger name="trace_log" additivity="false" level="${root.log.level}">
         <appender-ref ref="TRACE_LOG" />
+        <appender-ref ref="STDOUT"/>
     </logger>
 
     <logger name="error" level="ERROR" additivity="false">
         <appender-ref ref="ERROR_FILE"/>
+        <appender-ref ref="STDOUT"/>
     </logger>
 
+    <!--打印dao层中的sql语句-->
+    <logger name="com.dingpeng.java.exercise.lottery.resource.dao" level="DEBUG" additivity="false">
+        <appender-ref ref="STDOUT"/>
+    </logger>
 </configuration>

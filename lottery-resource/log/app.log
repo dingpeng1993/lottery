@@ -1,0 +1,80 @@
+[2019-03-05 13:38:18] INFO  ActivityEntityDaoTest.logStarting #  - Starting ActivityEntityDaoTest on DESKTOP-G8I4D3R with PID 246952 (started by admin in C:\Users\admin\IdeaProjects\lottery\lottery-resource)
+[2019-03-05 13:38:18] INFO  ActivityEntityDaoTest.logStartupProfileInfo #  - The following profiles are active: dev
+[2019-03-05 13:38:41] INFO  DocumentationPluginsBootstrapper.start #  - Context refreshed
+[2019-03-05 13:38:41] INFO  DocumentationPluginsBootstrapper.start #  - Found 1 custom documentation plugin(s)
+[2019-03-05 13:38:41] INFO  ApiListingReferenceScanner.scan #  - Scanning for api listing references
+[2019-03-05 13:38:41] INFO  ActivityEntityDaoTest.logStarted #  - Started ActivityEntityDaoTest in 24.873 seconds (JVM running for 30.652)
+[2019-03-05 13:38:51] INFO  DruidDataSource.init #  - {dataSource-1} inited
+[2019-03-05 13:39:02] INFO  DruidDataSource.close #  - {dataSource-1} closed
+[2019-03-05 13:40:24] INFO  ActivityEntityDaoTest.logStarting #  - Starting ActivityEntityDaoTest on DESKTOP-G8I4D3R with PID 249232 (started by admin in C:\Users\admin\IdeaProjects\lottery\lottery-resource)
+[2019-03-05 13:40:24] INFO  ActivityEntityDaoTest.logStartupProfileInfo #  - The following profiles are active: dev
+[2019-03-05 13:40:43] INFO  DocumentationPluginsBootstrapper.start #  - Context refreshed
+[2019-03-05 13:40:43] INFO  DocumentationPluginsBootstrapper.start #  - Found 1 custom documentation plugin(s)
+[2019-03-05 13:40:43] INFO  ApiListingReferenceScanner.scan #  - Scanning for api listing references
+[2019-03-05 13:40:44] INFO  ActivityEntityDaoTest.logStarted #  - Started ActivityEntityDaoTest in 21.174 seconds (JVM running for 25.02)
+[2019-03-05 13:40:49] INFO  DruidDataSource.init #  - {dataSource-1} inited
+[2019-03-05 13:40:50] INFO  DruidDataSource.close #  - {dataSource-1} closed
+[2019-03-05 13:41:57] INFO  ActivityEntityDaoTest.logStarting #  - Starting ActivityEntityDaoTest on DESKTOP-G8I4D3R with PID 231804 (started by admin in C:\Users\admin\IdeaProjects\lottery\lottery-resource)
+[2019-03-05 13:41:57] INFO  ActivityEntityDaoTest.logStartupProfileInfo #  - The following profiles are active: dev
+[2019-03-05 13:42:17] INFO  DocumentationPluginsBootstrapper.start #  - Context refreshed
+[2019-03-05 13:42:17] INFO  DocumentationPluginsBootstrapper.start #  - Found 1 custom documentation plugin(s)
+[2019-03-05 13:42:17] INFO  ApiListingReferenceScanner.scan #  - Scanning for api listing references
+[2019-03-05 13:42:17] INFO  ActivityEntityDaoTest.logStarted #  - Started ActivityEntityDaoTest in 22.122 seconds (JVM running for 26.278)
+[2019-03-05 13:42:19] INFO  DruidDataSource.init #  - {dataSource-1} inited
+[2019-03-05 13:42:59] INFO  DruidDataSource.close #  - {dataSource-1} closed
+[2019-03-05 15:35:27] INFO  ActivityEntityDaoTest.logStarting #  - Starting ActivityEntityDaoTest on DESKTOP-G8I4D3R with PID 250216 (started by admin in C:\Users\admin\IdeaProjects\lottery\lottery-resource)
+[2019-03-05 15:35:27] INFO  ActivityEntityDaoTest.logStartupProfileInfo #  - The following profiles are active: dev
+[2019-03-05 15:35:49] INFO  DocumentationPluginsBootstrapper.start #  - Context refreshed
+[2019-03-05 15:35:49] INFO  DocumentationPluginsBootstrapper.start #  - Found 1 custom documentation plugin(s)
+[2019-03-05 15:35:49] INFO  ApiListingReferenceScanner.scan #  - Scanning for api listing references
+[2019-03-05 15:35:50] INFO  ActivityEntityDaoTest.logStarted #  - Started ActivityEntityDaoTest in 23.892 seconds (JVM running for 27.098)
+[2019-03-05 15:35:52] INFO  DruidDataSource.init #  - {dataSource-1} inited
+[2019-03-05 15:36:15] INFO  DruidDataSource.close #  - {dataSource-1} closed
+[2019-03-05 15:37:32] INFO  ActivityEntityDaoTest.logStarting #  - Starting ActivityEntityDaoTest on DESKTOP-G8I4D3R with PID 251644 (started by admin in C:\Users\admin\IdeaProjects\lottery\lottery-resource)
+[2019-03-05 15:37:32] INFO  ActivityEntityDaoTest.logStartupProfileInfo #  - The following profiles are active: dev
+[2019-03-05 15:37:44] INFO  DocumentationPluginsBootstrapper.start #  - Context refreshed
+[2019-03-05 15:37:44] INFO  DocumentationPluginsBootstrapper.start #  - Found 1 custom documentation plugin(s)
+[2019-03-05 15:37:44] INFO  ApiListingReferenceScanner.scan #  - Scanning for api listing references
+[2019-03-05 15:37:45] INFO  ActivityEntityDaoTest.logStarted #  - Started ActivityEntityDaoTest in 13.642 seconds (JVM running for 16.375)
+[2019-03-05 15:37:46] INFO  DruidDataSource.init #  - {dataSource-1} inited
+[2019-03-05 15:37:46] INFO  DruidDataSource.close #  - {dataSource-1} closed
+[2019-03-05 15:44:14] INFO  ActivityEntityDaoTest.logStarting #  - Starting ActivityEntityDaoTest on DESKTOP-G8I4D3R with PID 247936 (started by admin in C:\Users\admin\IdeaProjects\lottery\lottery-resource)
+[2019-03-05 15:44:14] INFO  ActivityEntityDaoTest.logStartupProfileInfo #  - The following profiles are active: dev
+[2019-03-05 15:44:27] INFO  DocumentationPluginsBootstrapper.start #  - Context refreshed
+[2019-03-05 15:44:27] INFO  DocumentationPluginsBootstrapper.start #  - Found 1 custom documentation plugin(s)
+[2019-03-05 15:44:27] INFO  ApiListingReferenceScanner.scan #  - Scanning for api listing references
+[2019-03-05 15:44:27] INFO  ActivityEntityDaoTest.logStarted #  - Started ActivityEntityDaoTest in 14.224 seconds (JVM running for 16.828)
+[2019-03-05 15:44:28] INFO  DruidDataSource.init #  - {dataSource-1} inited
+[2019-03-05 15:44:29] INFO  DruidDataSource.close #  - {dataSource-1} closed
+[2019-03-05 15:58:59] INFO  ActivityEntityDaoTest.logStarting #  - Starting ActivityEntityDaoTest on DESKTOP-G8I4D3R with PID 251800 (started by admin in C:\Users\admin\IdeaProjects\lottery\lottery-resource)
+[2019-03-05 15:58:59] INFO  ActivityEntityDaoTest.logStartupProfileInfo #  - The following profiles are active: dev
+[2019-03-05 15:59:13] INFO  DocumentationPluginsBootstrapper.start #  - Context refreshed
+[2019-03-05 15:59:13] INFO  DocumentationPluginsBootstrapper.start #  - Found 1 custom documentation plugin(s)
+[2019-03-05 15:59:13] INFO  ApiListingReferenceScanner.scan #  - Scanning for api listing references
+[2019-03-05 15:59:14] INFO  ActivityEntityDaoTest.logStarted #  - Started ActivityEntityDaoTest in 16.075 seconds (JVM running for 19.073)
+[2019-03-05 15:59:15] INFO  DruidDataSource.init #  - {dataSource-1} inited
+[2019-03-05 15:59:16] INFO  DruidDataSource.close #  - {dataSource-1} closed
+[2019-03-05 16:02:05] INFO  ActivityEntityDaoTest.logStarting #  - Starting ActivityEntityDaoTest on DESKTOP-G8I4D3R with PID 251560 (started by admin in C:\Users\admin\IdeaProjects\lottery\lottery-resource)
+[2019-03-05 16:02:05] INFO  ActivityEntityDaoTest.logStartupProfileInfo #  - The following profiles are active: dev
+[2019-03-05 16:02:19] INFO  DocumentationPluginsBootstrapper.start #  - Context refreshed
+[2019-03-05 16:02:19] INFO  DocumentationPluginsBootstrapper.start #  - Found 1 custom documentation plugin(s)
+[2019-03-05 16:02:19] INFO  ApiListingReferenceScanner.scan #  - Scanning for api listing references
+[2019-03-05 16:02:19] INFO  ActivityEntityDaoTest.logStarted #  - Started ActivityEntityDaoTest in 15.839 seconds (JVM running for 19.188)
+[2019-03-05 16:02:20] INFO  DruidDataSource.init #  - {dataSource-1} inited
+[2019-03-05 16:02:21] INFO  DruidDataSource.close #  - {dataSource-1} closed
+[2019-03-05 16:13:22] INFO  ActivityEntityDaoTest.logStarting #  - Starting ActivityEntityDaoTest on DESKTOP-G8I4D3R with PID 251448 (started by admin in C:\Users\admin\IdeaProjects\lottery\lottery-resource)
+[2019-03-05 16:13:22] INFO  ActivityEntityDaoTest.logStartupProfileInfo #  - The following profiles are active: dev
+[2019-03-05 16:13:36] INFO  DocumentationPluginsBootstrapper.start #  - Context refreshed
+[2019-03-05 16:13:36] INFO  DocumentationPluginsBootstrapper.start #  - Found 1 custom documentation plugin(s)
+[2019-03-05 16:13:36] INFO  ApiListingReferenceScanner.scan #  - Scanning for api listing references
+[2019-03-05 16:13:36] INFO  ActivityEntityDaoTest.logStarted #  - Started ActivityEntityDaoTest in 15.125 seconds (JVM running for 17.879)
+[2019-03-05 16:13:37] INFO  DruidDataSource.init #  - {dataSource-1} inited
+[2019-03-05 16:14:35] INFO  DruidDataSource.close #  - {dataSource-1} closed
+[2019-03-05 16:15:54] INFO  ActivityEntityDaoTest.logStarting #  - Starting ActivityEntityDaoTest on DESKTOP-G8I4D3R with PID 248668 (started by admin in C:\Users\admin\IdeaProjects\lottery\lottery-resource)
+[2019-03-05 16:15:54] INFO  ActivityEntityDaoTest.logStartupProfileInfo #  - The following profiles are active: dev
+[2019-03-05 16:16:08] INFO  DocumentationPluginsBootstrapper.start #  - Context refreshed
+[2019-03-05 16:16:08] INFO  DocumentationPluginsBootstrapper.start #  - Found 1 custom documentation plugin(s)
+[2019-03-05 16:16:08] INFO  ApiListingReferenceScanner.scan #  - Scanning for api listing references
+[2019-03-05 16:16:09] INFO  ActivityEntityDaoTest.logStarted #  - Started ActivityEntityDaoTest in 16.047 seconds (JVM running for 19.077)
+[2019-03-05 16:16:09] INFO  DruidDataSource.init #  - {dataSource-1} inited
+[2019-03-05 16:16:33] INFO  DruidDataSource.close #  - {dataSource-1} closed

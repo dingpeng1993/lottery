@@ -1,9 +1,6 @@
 package com.dingpeng.java.exercise.lottery.resource.entity;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
-
-import java.util.List;
 
 /**
  * @author dp
@@ -15,37 +12,30 @@ public class PrizePoolEntity extends BaseEntity{
     /**
      * 对应的活动Id
      */
-    private Integer activityId;
+    private Long activityId;
 
     /**
      * 对应活动的批次Id
      */
-    private Integer segmentId;
+    private Long segmentId;
+    /**
+     * 包含的奖品ID
+     */
+    private Long prizeId;
 
+    /**
+     * 奖品总数
+     */
+    private Integer total;
 
-    private List<PrizeLimit> prizeList;
+    /**
+     * 奖品剩余数量
+     */
+    private Integer exist;
 
-
-    @Data
-    public static class PrizeLimit{
-        @JsonProperty("id")
-        private Integer prizeId;
-        /**
-         * 该奖品总数
-         */
-        @JsonProperty("all")
-        private Integer totalNum;
-
-        /**
-         * 该奖品剩余数量
-         */
-        @JsonProperty("ex")
-        private Integer existNum;
-        /**
-         * 可以中将奖品池奖品的人群Id
-         */
-        @JsonProperty("gid")
-        private String groupIds;
-    }
+    /**
+     * 奖品对应人群
+     */
+    private String groupIds;
 
 }

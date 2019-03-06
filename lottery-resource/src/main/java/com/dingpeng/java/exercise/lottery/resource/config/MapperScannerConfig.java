@@ -16,11 +16,11 @@ import org.springframework.context.annotation.Configuration;
 @AutoConfigureAfter(MybatisConfig.class)
 public class MapperScannerConfig {
 
-    @Bean("mapperScannerConfig")
+    @Bean
     public MapperScannerConfigurer mapperScannerConfigurer(){
         MapperScannerConfigurer configurer = new MapperScannerConfigurer();
         configurer.setSqlSessionFactoryBeanName("sqlSessionFactory");
-        configurer.setBasePackage("com.dingpeng.java.exercise.lottery.resource.mapper");
+        configurer.setBasePackage("com.dingpeng.java.exercise.lottery.resource.dao");
         return configurer;
     }
 }

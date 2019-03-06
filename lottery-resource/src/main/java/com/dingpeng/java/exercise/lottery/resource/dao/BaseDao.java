@@ -1,5 +1,6 @@
 package com.dingpeng.java.exercise.lottery.resource.dao;
 
+
 import com.dingpeng.java.exercise.lottery.resource.entity.BaseEntity;
 
 /**
@@ -10,14 +11,14 @@ public interface BaseDao <E extends BaseEntity> {
     /**
      * 插入新建的一条数据
      * @param entity
-     * @return Integer
+     * @return Long
      */
     Long insertOne(E entity);
 
     /**
      * 根据id更新记录内容
      * @param entity
-     * @return Integer
+     * @return Long
      */
     Long updateByPrimaryKey(E entity);
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <!--<mapper>是配置文件的核心元素 namespace指定唯一的命名空间，直接绑定Dao接口，面向接口编程，接口中的方法不用实现，方法名即为sql语句的Id-->
-<mapper namespace="com.dingpeng.java.exercise.lottery.resource.mapper.ActivityEntityDao" >
+<mapper namespace="com.dingpeng.java.exercise.lottery.resource.dao.ActivityEntityDao" >
     <!--结果映射集，定义表到实体类的映射规则-->
     <resultMap id="ActivityResultMap" type="com.dingpeng.java.exercise.lottery.resource.entity.ActivityEntity" >
         <id column="id" property="id" jdbcType="INTEGER" />
@@ -16,18 +16,19 @@
 
     <sql id="Table_Name">activity</sql>
     <sql id="Concise_Column_List" >name, description, start_time, end_time, status</sql>
-    <sql id="Total_Column_List">id, name, deacription, start_time, end_time, status, create_time,update_time</sql>
+    <sql id="Total_Column_List">id, name, description, start_time, end_time, status, create_time,update_time</sql>
 
-    <!--当主键是自增的情况下 useGeneratedKeys="true" keyProperty="id"添加成功后可以获得对象属性id的值-->
-    <insert id="insertOne" parameterType="com.dingpeng.java.exercise.lottery.base.entity.ActivityEntity" useGeneratedKeys="true" keyProperty="id">
+    <!--当主键是自增的情况下 useGeneratedKeys="true" keyProperty="id"添加成功后可以获得对象属性id的值,是在对象里！！！
+    返回的还是行数-->
+    <insert id="insertOne" useGeneratedKeys="true" keyProperty="id" keyColumn="id" parameterType="com.dingpeng.java.exercise.lottery.resource.entity.ActivityEntity" >
         INSERT INTO
         <include refid="Table_Name"/>
-        (name, description, start_time, end_time, status)
+        (<include refid="Concise_Column_List"/>)
         VALUES
         (#{name}, #{description}, #{startTime}, #{endTime},#{status})
     </insert>
 
-    <insert id="insertList" parameterType="List" useGeneratedKeys="true" keyProperty="id">
+    <insert id="insertList" parameterType="java.util.List" useGeneratedKeys="true" keyProperty="id">
         INSERT INTO
         <include refid="Table_Name"/>
         (name, description, start_time, end_time, status)
@@ -37,7 +38,7 @@
         </foreach>
     </insert>
 
-    <update id="updateByPrimaryKey" parameterType="com.dingpeng.java.exercise.lottery.base.entity.ActivityEntity">
+    <update id="updateByPrimaryKey" parameterType="com.dingpeng.java.exercise.lottery.resource.entity.ActivityEntity">
         UPDATE
         <include refid="Table_Name"/>
         <set>
@@ -84,7 +85,7 @@
         <!-- <等特殊字符要放在<![CDATA[ ]]>-->
         <![CDATA[AND start_time <= #{currentTime}]]>
         AND end_time >= #{currentTime}
-        ORDER BY CREATE ASC
+        ORDER BY update_time ASC
     </select>
 
     <select id="selectUnEffectiveActivity" parameterType="map" resultMap="ActivityResultMap">
@@ -96,6 +97,6 @@
         <!-- <等特殊字符要放在<![CDATA[ ]]> 未开始 或者 已结束-->
         OR start_time >= #{currentTime}
         <![CDATA[OR end_time <= #{currentTime}]]>
-        ORDER BY CREATE ASC
+        ORDER BY update_time ASC
     </select>
 </mapper>

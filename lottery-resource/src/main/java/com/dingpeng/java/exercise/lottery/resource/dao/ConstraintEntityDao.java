@@ -1,5 +1,6 @@
 package com.dingpeng.java.exercise.lottery.resource.dao;
 
+
 import com.dingpeng.java.exercise.lottery.resource.entity.ConstraintEntity;
 import org.apache.ibatis.annotations.Param;
 
@@ -18,4 +19,11 @@ public interface ConstraintEntityDao extends BaseDao<ConstraintEntity>{
      * @return
      */
     List<ConstraintEntity> selectUsefulConstraint(@Param("activityId") Integer activityId,  @Param("segmentId") Integer segmentId);
+
+    /**
+     * 批量插入规则
+     * @param constraints
+     * @return
+     */
+    Integer insertList(List<ConstraintEntity> constraints);
 }

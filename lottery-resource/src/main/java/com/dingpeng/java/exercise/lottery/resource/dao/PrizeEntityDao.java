@@ -1,5 +1,6 @@
 package com.dingpeng.java.exercise.lottery.resource.dao;
 
+
 import com.dingpeng.java.exercise.lottery.resource.entity.PrizeEntity;
 import java.util.List;
 

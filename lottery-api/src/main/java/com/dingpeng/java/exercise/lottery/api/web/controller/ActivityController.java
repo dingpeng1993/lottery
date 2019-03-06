@@ -7,15 +7,14 @@ import com.dingpeng.java.exercise.lottery.common.response.BaseResponse;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
 import javax.validation.Valid;
-import java.util.List;
 /**
  * @author dp
  * Date: 2019/2/20 13:10
@@ -28,7 +27,7 @@ import java.util.List;
 @Api(value = "活动接口", tags = "用于增删改活动相关操作")
 public class ActivityController {
 
-    @Autowired
+    @Resource
     private ActivityFlow activityFlow;
 
     @PostMapping("/save")
@@ -36,8 +35,7 @@ public class ActivityController {
     public BaseResponse save(@Valid @RequestBody SaveActivityRequest activityRequest, BindingResult result){
         //确认参数合法
         BindingResultUtil.assertParamValid(result);
-
-        List<Long> activityIds =activityFlow.doSave(activityRequest);
-        return null;
+        Long activityId =activityFlow.doSave(activityRequest);
+        return BaseResponse.success(activityId);
     }
 }

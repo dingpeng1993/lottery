@@ -1,0 +1,56 @@
+[2019-03-06 15:53:05] INFO  LotteryControllerTest.logStarting #  - Starting LotteryControllerTest on DESKTOP-G8I4D3R with PID 272804 (started by admin in C:\Users\admin\IdeaProjects\lottery\lottery-api)
+[2019-03-06 15:53:05] INFO  LotteryControllerTest.logStartupProfileInfo #  - The following profiles are active: dev
+[2019-03-06 15:53:20] INFO  DocumentationPluginsBootstrapper.start #  - Context refreshed
+[2019-03-06 15:53:20] INFO  DocumentationPluginsBootstrapper.start #  - Found 1 custom documentation plugin(s)
+[2019-03-06 15:53:20] INFO  ApiListingReferenceScanner.scan #  - Scanning for api listing references
+[2019-03-06 15:53:21] INFO  LotteryControllerTest.logStarted #  - Started LotteryControllerTest in 16.457 seconds (JVM running for 19.532)
+[2019-03-06 15:53:47] INFO  LotteryControllerTest.logStarting #  - Starting LotteryControllerTest on DESKTOP-G8I4D3R with PID 271384 (started by admin in C:\Users\admin\IdeaProjects\lottery\lottery-api)
+[2019-03-06 15:53:47] INFO  LotteryControllerTest.logStartupProfileInfo #  - The following profiles are active: dev
+[2019-03-06 15:54:01] INFO  DocumentationPluginsBootstrapper.start #  - Context refreshed
+[2019-03-06 15:54:01] INFO  DocumentationPluginsBootstrapper.start #  - Found 1 custom documentation plugin(s)
+[2019-03-06 15:54:01] INFO  ApiListingReferenceScanner.scan #  - Scanning for api listing references
+[2019-03-06 15:54:02] INFO  LotteryControllerTest.logStarted #  - Started LotteryControllerTest in 15.492 seconds (JVM running for 18.533)
+[2019-03-06 16:22:45] INFO  LotteryControllerTest.logStarting #  - Starting LotteryControllerTest on DESKTOP-G8I4D3R with PID 273080 (started by admin in C:\Users\admin\IdeaProjects\lottery\lottery-api)
+[2019-03-06 16:22:45] INFO  LotteryControllerTest.logStartupProfileInfo #  - The following profiles are active: dev
+[2019-03-06 16:23:00] INFO  DocumentationPluginsBootstrapper.start #  - Context refreshed
+[2019-03-06 16:23:00] INFO  DocumentationPluginsBootstrapper.start #  - Found 1 custom documentation plugin(s)
+[2019-03-06 16:23:00] INFO  ApiListingReferenceScanner.scan #  - Scanning for api listing references
+[2019-03-06 16:23:00] INFO  LotteryControllerTest.logStarted #  - Started LotteryControllerTest in 16.517 seconds (JVM running for 19.885)
+[2019-03-06 16:23:01] INFO  DruidDataSource.init #  - {dataSource-1} inited
+[2019-03-06 16:23:02] INFO  DruidDataSource.close #  - {dataSource-1} closed
+[2019-03-06 16:24:55] INFO  LotteryControllerTest.logStarting #  - Starting LotteryControllerTest on DESKTOP-G8I4D3R with PID 257904 (started by admin in C:\Users\admin\IdeaProjects\lottery\lottery-api)
+[2019-03-06 16:24:55] INFO  LotteryControllerTest.logStartupProfileInfo #  - The following profiles are active: dev
+[2019-03-06 16:25:10] INFO  DocumentationPluginsBootstrapper.start #  - Context refreshed
+[2019-03-06 16:25:10] INFO  DocumentationPluginsBootstrapper.start #  - Found 1 custom documentation plugin(s)
+[2019-03-06 16:25:10] INFO  ApiListingReferenceScanner.scan #  - Scanning for api listing references
+[2019-03-06 16:25:10] INFO  LotteryControllerTest.logStarted #  - Started LotteryControllerTest in 16.221 seconds (JVM running for 19.68)
+[2019-03-06 16:25:11] INFO  DruidDataSource.init #  - {dataSource-1} inited
+[2019-03-06 16:25:12] INFO  LogAspect.before #  - uri=/api/lottery/draw || request={"activityId":"75753253","role":1,"userId":"q4364765868"}
+[2019-03-06 16:25:25] INFO  LogAspect.after #  - uri=/api/lottery/draw || response={"activityId":"75753253","role":1,"userId":"q4364765868"}
+[2019-03-06 16:25:40] INFO  DruidDataSource.close #  - {dataSource-1} closed
+[2019-03-06 16:31:53] INFO  LotteryControllerTest.logStarting #  - Starting LotteryControllerTest on DESKTOP-G8I4D3R with PID 272332 (started by admin in C:\Users\admin\IdeaProjects\lottery\lottery-api)
+[2019-03-06 16:31:53] INFO  LotteryControllerTest.logStartupProfileInfo #  - The following profiles are active: dev
+[2019-03-06 16:32:07] INFO  DocumentationPluginsBootstrapper.start #  - Context refreshed
+[2019-03-06 16:32:07] INFO  DocumentationPluginsBootstrapper.start #  - Found 1 custom documentation plugin(s)
+[2019-03-06 16:32:07] INFO  ApiListingReferenceScanner.scan #  - Scanning for api listing references
+[2019-03-06 16:32:08] INFO  LotteryControllerTest.logStarted #  - Started LotteryControllerTest in 16.079 seconds (JVM running for 19.542)
+[2019-03-06 16:33:20] INFO  LotteryControllerTest.logStarting #  - Starting LotteryControllerTest on DESKTOP-G8I4D3R with PID 272796 (started by admin in C:\Users\admin\IdeaProjects\lottery\lottery-api)
+[2019-03-06 16:33:20] INFO  LotteryControllerTest.logStartupProfileInfo #  - The following profiles are active: dev
+[2019-03-06 16:33:33] INFO  DocumentationPluginsBootstrapper.start #  - Context refreshed
+[2019-03-06 16:33:33] INFO  DocumentationPluginsBootstrapper.start #  - Found 1 custom documentation plugin(s)
+[2019-03-06 16:33:33] INFO  ApiListingReferenceScanner.scan #  - Scanning for api listing references
+[2019-03-06 16:33:34] INFO  LotteryControllerTest.logStarted #  - Started LotteryControllerTest in 15.098 seconds (JVM running for 18.43)
+[2019-03-06 16:33:34] INFO  DruidDataSource.init #  - {dataSource-1} inited
+[2019-03-06 16:33:35] INFO  LogAspect.before #  - uri=/api/lottery/draw || request={"activityId":"75753253","role":1,"userId":"q4364765868"}
+[2019-03-06 16:33:43] INFO  LogAspect.after #  - uri=/api/lottery/draw || response={"activityId":"75753253","role":1,"userId":"q4364765868"}
+[2019-03-06 16:33:43] INFO  DruidDataSource.close #  - {dataSource-1} closed
+[2019-03-06 16:34:51] INFO  LotteryControllerTest.logStarting #  - Starting LotteryControllerTest on DESKTOP-G8I4D3R with PID 256756 (started by admin in C:\Users\admin\IdeaProjects\lottery\lottery-api)
+[2019-03-06 16:34:51] INFO  LotteryControllerTest.logStartupProfileInfo #  - The following profiles are active: dev
+[2019-03-06 16:35:04] INFO  DocumentationPluginsBootstrapper.start #  - Context refreshed
+[2019-03-06 16:35:04] INFO  DocumentationPluginsBootstrapper.start #  - Found 1 custom documentation plugin(s)
+[2019-03-06 16:35:04] INFO  ApiListingReferenceScanner.scan #  - Scanning for api listing references
+[2019-03-06 16:35:04] INFO  LotteryControllerTest.logStarted #  - Started LotteryControllerTest in 14.444 seconds (JVM running for 17.563)
+[2019-03-06 16:35:05] INFO  DruidDataSource.init #  - {dataSource-1} inited
+[2019-03-06 16:35:06] INFO  LogAspect.before #  - uri=/api/lottery/draw || request={"activityId":"75753253","role":1,"userId":"q4364765868"}
+[2019-03-06 16:35:08] INFO  LogAspect.after #  - uri=/api/lottery/draw || response={"activityId":"75753253","role":1,"userId":"q4364765868"}
+[2019-03-06 16:35:08] INFO  DruidDataSource.close #  - {dataSource-1} closed

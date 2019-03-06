@@ -15,7 +15,7 @@ public class BaseEntity {
      * 默认主键Id
      */
 
-    private Integer id;
+    private Long id;
 
     /**
      * 创建时间

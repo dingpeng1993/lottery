@@ -1,0 +1,38 @@
+[2019-03-05 17:50:25] INFO  ApplicationStarter.logStarting #  - Starting ApplicationStarter on DESKTOP-G8I4D3R with PID 251420 (C:\Users\admin\IdeaProjects\lottery\lottery-api\target\classes started by admin in C:\Users\admin\IdeaProjects\lottery)
+[2019-03-05 17:50:25] INFO  ApplicationStarter.logStartupProfileInfo #  - The following profiles are active: dev
+[2019-03-05 17:50:28] INFO  Http11NioProtocol.log #  - Initializing ProtocolHandler ["http-nio-8084"]
+[2019-03-05 17:50:28] INFO  StandardService.log #  - Starting service [Tomcat]
+[2019-03-05 17:50:28] INFO  StandardEngine.log #  - Starting Servlet Engine: Apache Tomcat/9.0.13
+[2019-03-05 17:50:28] INFO  AprLifecycleListener.log #  - An older version [1.2.16] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.18]
+[2019-03-05 17:50:28] INFO  AprLifecycleListener.log #  - Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+[2019-03-05 17:50:28] INFO  AprLifecycleListener.log #  - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[2019-03-05 17:50:28] INFO  AprLifecycleListener.log #  - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2019-03-05 17:50:29] INFO  AprLifecycleListener.log #  - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+[2019-03-05 17:50:30] INFO  [/].log #  - Initializing Spring embedded WebApplicationContext
+[2019-03-05 17:50:31] INFO  StandardService.log #  - Stopping service [Tomcat]
+[2019-03-05 17:55:23] INFO  ApplicationStarter.logStarting #  - Starting ApplicationStarter on DESKTOP-G8I4D3R with PID 248828 (C:\Users\admin\IdeaProjects\lottery\lottery-api\target\classes started by admin in C:\Users\admin\IdeaProjects\lottery)
+[2019-03-05 17:55:23] INFO  ApplicationStarter.logStartupProfileInfo #  - The following profiles are active: dev
+[2019-03-05 17:55:33] INFO  Http11NioProtocol.log #  - Initializing ProtocolHandler ["http-nio-8084"]
+[2019-03-05 17:55:33] INFO  StandardService.log #  - Starting service [Tomcat]
+[2019-03-05 17:55:33] INFO  StandardEngine.log #  - Starting Servlet Engine: Apache Tomcat/9.0.13
+[2019-03-05 17:55:33] INFO  AprLifecycleListener.log #  - An older version [1.2.16] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.18]
+[2019-03-05 17:55:33] INFO  AprLifecycleListener.log #  - Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+[2019-03-05 17:55:33] INFO  AprLifecycleListener.log #  - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+[2019-03-05 17:55:33] INFO  AprLifecycleListener.log #  - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2019-03-05 17:55:34] INFO  AprLifecycleListener.log #  - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+[2019-03-05 17:55:34] INFO  [/].log #  - Initializing Spring embedded WebApplicationContext
+[2019-03-05 17:55:49] INFO  Http11NioProtocol.log #  - Initializing ProtocolHandler ["http-nio-127.0.0.1-9522"]
+[2019-03-05 17:55:49] INFO  StandardService.log #  - Starting service [Tomcat]
+[2019-03-05 17:55:49] INFO  StandardEngine.log #  - Starting Servlet Engine: Apache Tomcat/9.0.13
+[2019-03-05 17:55:49] INFO  [/].log #  - Initializing Spring embedded WebApplicationContext
+[2019-03-05 17:55:49] INFO  Http11NioProtocol.log #  - Starting ProtocolHandler ["http-nio-127.0.0.1-9522"]
+[2019-03-05 17:55:49] INFO  NioSelectorPool.log #  - Using a shared selector for servlet write/read
+[2019-03-05 17:55:49] INFO  DocumentationPluginsBootstrapper.start #  - Context refreshed
+[2019-03-05 17:55:49] INFO  DocumentationPluginsBootstrapper.start #  - Found 1 custom documentation plugin(s)
+[2019-03-05 17:55:49] INFO  ApiListingReferenceScanner.scan #  - Scanning for api listing references
+[2019-03-05 17:55:50] INFO  Http11NioProtocol.log #  - Starting ProtocolHandler ["http-nio-8084"]
+[2019-03-05 17:55:50] INFO  NioSelectorPool.log #  - Using a shared selector for servlet write/read
+[2019-03-05 17:55:50] INFO  ApplicationStarter.logStarted #  - Started ApplicationStarter in 27.925 seconds (JVM running for 30.089)
+[2019-03-05 17:55:51] INFO  [/].log #  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2019-03-05 17:55:52] INFO  DruidDataSource.init #  - {dataSource-1} inited
+[2019-03-05 17:56:00] INFO  LogAspect.before #  - uri=/api/activity/save || request={"description":"增加用户流量而举办的活动","endTime":"2019-01-01 24:00:00","name":"贺新春抽奖活动","segmentList":[{"description":"仅限杭州用户参加","endTime":"2019-01-01 24:00:00","name":"杭州地区活动","prizeList":[{"exist":50,"feature":"id=34543646","groupIds":"[1,2,3]","name":"50元优惠券","total":100,"type":2},{"exist":10,"feature":"id=34543646","groupIds":"[2,3]","name":"1元奖励金","total":50,"type":3}],"ruleList":[{"key":"MAX_HIT_NUM","name":"没人最高中奖上限","type":2,"value":"2"}],"startTime":"2018-01-01 00:00:00","status":1}],"startTime":"2018-01-01 00:00:00","status":1}

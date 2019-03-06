@@ -1,5 +1,6 @@
 package com.dingpeng.java.exercise.lottery.resource.dao;
 
+
 import com.dingpeng.java.exercise.lottery.resource.entity.ActivityEntity;
 import org.apache.ibatis.annotations.Param;
 
