@@ -13,6 +13,7 @@ import java.util.regex.Pattern;
  */
 public class StringUtils {
 
+    public static final String EMPTY = "";
     public static final String LIST_BREAK = ",";
     public static final String LIST_EDGE = "[]";
 

@@ -39,15 +39,16 @@ class LotteryControllerTest {
 
     @BeforeEach
     void before() {
+        //构造MockMvc
         mockMvc = MockMvcBuilders.webAppContextSetup(context).build();
     }
 
     @Test
     void draw() throws Exception {
         DrawRequest drawRequest = new DrawRequest();
-        drawRequest.setActivityId("75753253");
+        drawRequest.setActivityId(75753253L);
         drawRequest.setRole(1);
-        drawRequest.setUserId("q4364765868");
+        drawRequest.setUserId(4364765868L);
         MvcResult result = mockMvc.perform(MockMvcRequestBuilders.post("/api/lottery/draw")
                 .contentType(MediaType.APPLICATION_JSON)
                 .header("uid", "3097971665604608")

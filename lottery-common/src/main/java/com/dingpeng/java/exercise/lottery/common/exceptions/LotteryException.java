@@ -33,4 +33,8 @@ public class LotteryException extends RuntimeException{
         this(statusCode.getCode(),statusCode.getMsg(args),statusCode.getStatus());
     }
 
+    public LotteryException(String errorMessage){
+        super(errorMessage);
+    }
+
 }

@@ -2,6 +2,7 @@ package com.dingpeng.java.exercise.lottery.resource.dao;
 
 
 import com.dingpeng.java.exercise.lottery.resource.entity.ActivityEntity;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.Date;
@@ -12,6 +13,7 @@ import java.util.List;
  * @author dp
  * @date 2019.01.25
  */
+@Mapper
 public interface ActivityEntityDao extends BaseDao<ActivityEntity> {
 
     /**
@@ -34,4 +36,6 @@ public interface ActivityEntityDao extends BaseDao<ActivityEntity> {
      * @return
      */
     List<ActivityEntity> selectUnEffectiveActivity(@Param("currentTime") Date currentTime);
+
+
 }

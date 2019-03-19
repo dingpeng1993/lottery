@@ -13,12 +13,12 @@ public class DrawRequest {
     /**
      * 活动Id
      */
-    private String activityId;
+    private Long activityId;
 
     /**
      * 用户Id
      */
-    private String userId;
+    private Long userId;
 
     /**
      * 用户角色

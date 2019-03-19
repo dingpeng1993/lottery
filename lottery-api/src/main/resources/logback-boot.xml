@@ -76,19 +76,16 @@
     <root level="${root.log.level}">
         <appender-ref ref="APP_FILE"/>
         <appender-ref ref="STDOUT"/>
+        <appender-ref ref="ERROR_FILE"/>
     </root>
 
     <logger name="org.springframework" level="${root.log.level}" additivity="false">
         <appender-ref ref="SPRING_FILE"/>
         <appender-ref ref="STDOUT"/>
+        <appender-ref ref="ERROR_FILE"/>
     </logger>
     <logger name="trace_log" additivity="false" level="${root.log.level}">
         <appender-ref ref="TRACE_LOG" />
-        <appender-ref ref="STDOUT"/>
-    </logger>
-
-    <logger name="error" level="ERROR" additivity="false">
-        <appender-ref ref="ERROR_FILE"/>
         <appender-ref ref="STDOUT"/>
     </logger>
 

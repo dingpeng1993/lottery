@@ -2,6 +2,7 @@ package com.dingpeng.java.exercise.lottery.resource.dao;
 
 
 import com.dingpeng.java.exercise.lottery.resource.entity.ConstraintEntity;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -10,6 +11,7 @@ import java.util.List;
  * @author dp
  * @date 2019.01.25
  */
+@Mapper
 public interface ConstraintEntityDao extends BaseDao<ConstraintEntity>{
 
     /**

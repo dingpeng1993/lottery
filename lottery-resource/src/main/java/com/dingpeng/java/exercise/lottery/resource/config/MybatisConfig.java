@@ -23,7 +23,7 @@ import javax.sql.DataSource;
  * Mybatis 基础配置类
  * @author dp
  * @date 2019.01.25
- * 开启注解事务管理
+ * 注解@EnableTransactionManagement为声明式事务，使spring自动扫描@Transactional的注解
  * 实现接口 TransactionManagementConfigurer 方法，其返回值代表在拥有多个事务管理器的情况下默认使用的事务管理器
  */
 

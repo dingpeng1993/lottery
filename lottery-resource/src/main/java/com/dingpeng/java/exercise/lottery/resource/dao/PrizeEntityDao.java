@@ -2,12 +2,15 @@ package com.dingpeng.java.exercise.lottery.resource.dao;
 
 
 import com.dingpeng.java.exercise.lottery.resource.entity.PrizeEntity;
+import org.apache.ibatis.annotations.Mapper;
+
 import java.util.List;
 
 /**
  * @author dp
  * @date 2019.01.25
  */
+@Mapper
 public interface PrizeEntityDao extends BaseDao<PrizeEntity>{
 
     /**

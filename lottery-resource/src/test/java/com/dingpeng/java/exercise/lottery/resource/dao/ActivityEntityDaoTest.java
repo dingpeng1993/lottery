@@ -16,14 +16,13 @@ import org.junit.jupiter.params.provider.CsvSource;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.transaction.annotation.Transactional;
-
 import javax.annotation.Resource;
 import java.util.List;
 /**
  * @author dp
  * Date: 2019/2/26 20:04
  * Description: Junit 5 测试必须使用@ExtendWith(SpringExtension.class)启动spring
- * 自动回滚用 @Transactional
+ * 自动回滚用 @Transactional 该注解用于测试方法时不会提交，需手动提交@commit
  *
  */
 @SpringBootTest(classes = {TestConfig.class, MapperScannerConfig.class, MybatisConfig.class})

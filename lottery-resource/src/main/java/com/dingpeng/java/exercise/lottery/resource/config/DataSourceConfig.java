@@ -60,7 +60,7 @@ public class DataSourceConfig {
 
         //当TestWhileIdle为true，每过timeBetweenEvictionRunsMillis时间，就会启动一个线程，校验连接池中闲置时间超过minEvictableIdleTimeMillis的连接对象
         dataSource.setTimeBetweenEvictionRunsMillis(30000);
-        dataSource.setMinEvictableIdleTimeMillis(15000);
+        dataSource.setMinEvictableIdleTimeMillis(30000);
         // 用于验证数据库连接的有效性，mysql的验证语句是select，其他的数据库可能不同
         dataSource.setValidationQuery("select 1");
         //连接空闲时是否进行有效性验证（即是否还和数据库连通的）

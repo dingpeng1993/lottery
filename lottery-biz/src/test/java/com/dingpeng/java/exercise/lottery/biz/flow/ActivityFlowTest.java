@@ -24,11 +24,8 @@ import static org.mockito.Mockito.*;
 @ExtendWith(MockitoExtension.class)
 @DisplayName("Mockito打桩测试")
 class ActivityFlowTest {
-
     /**
-     * @InjectMocks注入Mock对象，为需要测试的对象
-     * ActivityFlow类有类型为ActivityService的成员变量
-     * @Mock定义的mock对象将会被注入到这个待测试的对象
+     * @Mock注解的对象是@InjectMocks注解对象里的成员变量，@Mock完成成员变量的注入工作。
      * @Spy与@Mock的区别在于Spy声明的对象，对函数的调用均执行真正部分。
      * 而Mock声明的对象，对函数的调用均执行mock（即虚假函数），不执行真正部分。
      */
@@ -37,7 +34,6 @@ class ActivityFlowTest {
 
     @Mock
     private ActivityService activityService;
-
 
     private SaveActivityRequest saveActivityRequest;
 
@@ -69,6 +65,4 @@ class ActivityFlowTest {
         //判断该参数值的函数是否被执行过
         verify(activityService, never()).saveActivity(new Activity());
     }
-
-
 }

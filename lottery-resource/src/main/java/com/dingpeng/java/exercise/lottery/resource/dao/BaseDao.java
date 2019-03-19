@@ -2,11 +2,13 @@ package com.dingpeng.java.exercise.lottery.resource.dao;
 
 
 import com.dingpeng.java.exercise.lottery.resource.entity.BaseEntity;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
  * @author dp
  * @param <E> 返回实体类型
  */
+@Mapper
 public interface BaseDao <E extends BaseEntity> {
     /**
      * 插入新建的一条数据

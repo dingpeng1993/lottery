@@ -2,6 +2,7 @@ package com.dingpeng.java.exercise.lottery.resource.dao;
 
 
 import com.dingpeng.java.exercise.lottery.resource.entity.PrizeRecordEntity;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
@@ -9,6 +10,7 @@ import java.util.List;
  * @author dp
  * @date 2019.01.25
  */
+@Mapper
 public interface PrizeRecordEntityDao extends BaseDao<PrizeRecordEntity>{
 
     /**
@@ -21,4 +23,6 @@ public interface PrizeRecordEntityDao extends BaseDao<PrizeRecordEntity>{
      */
     List<PrizeRecordEntity> selectByCondition(@Param("userId") Long userId, @Param("activityId") Integer activityId,
                                               @Param("segmentId") Integer segmentId, @Param("prizeId") Integer prizeId);
+
+
 }
