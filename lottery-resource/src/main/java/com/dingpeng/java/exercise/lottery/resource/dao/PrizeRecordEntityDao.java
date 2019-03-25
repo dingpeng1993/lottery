@@ -25,4 +25,6 @@ public interface PrizeRecordEntityDao extends BaseDao<PrizeRecordEntity>{
                                               @Param("segmentId") Integer segmentId, @Param("prizeId") Integer prizeId);
 
 
+
+    List<PrizeRecordEntity> pageQuery();
 }

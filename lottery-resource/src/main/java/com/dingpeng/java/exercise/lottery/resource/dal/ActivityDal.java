@@ -118,4 +118,8 @@ public class ActivityDal implements ActivityRepository {
         segmentEntities.forEach(e -> e.setActivityId(activity.getActivityId()));
         return segmentEntities;
     }
+
+    private List<PrizeRecordEntity> queryRecord(Long activityId, Integer currentPage, Integer pageSize){
+        return null;
+    }
 }

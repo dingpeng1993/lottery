@@ -32,14 +32,13 @@ public class LotteryController {
     private DrawFlow drawFlow;
 
     @PostMapping("/draw")
-    @ApiOperation(value = "抽奖并返回结果")
+    @ApiOperation(value = "抽奖并返回结果", notes = "得到抽奖奖品")
     public BaseResponse draw(@Valid @RequestBody DrawRequest drawRequest, BindingResult result){
         //验证参数合法性
         BindingResultUtil.assertParamValid(result);
         drawFlow.doDraw(drawRequest);
         return BaseResponse.create(StatusCode.SERVICE_RUN_SUCCESS, drawRequest);
     }
-
 
 
 }

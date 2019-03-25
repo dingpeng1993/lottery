@@ -8,10 +8,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.validation.Valid;
@@ -31,11 +28,18 @@ public class ActivityController {
     private ActivityFlow activityFlow;
 
     @PostMapping("/save")
-    @ApiOperation(value = "新建一个活动", tags = "新建一个活动，包括批次，奖品池")
+    @ApiOperation(value = "新建一个活动", notes = "新建并保存活动")
     public BaseResponse save(@Valid @RequestBody SaveActivityRequest activityRequest, BindingResult result){
         //确认参数合法
         BindingResultUtil.assertParamValid(result);
         Long activityId =activityFlow.doSave(activityRequest);
         return BaseResponse.success(activityId);
+    }
+
+    @PostMapping("/update")
+    @ApiOperation(value = "更新一个活动", notes = "根据id更新活动")
+    public BaseResponse update(@Valid @RequestBody SaveActivityRequest activityRequest, BindingResult result){
+        BindingResultUtil.assertParamValid(result);
+        return null;
     }
 }

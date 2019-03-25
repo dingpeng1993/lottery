@@ -13,6 +13,7 @@ log/
 *.iws
 *.iml
 *.ipr
+/log
 
 ### NetBeans ###
 nbproject/private/
@@ -25,3 +26,4 @@ nbdist/
 # logs
 /logs
 /output
+
